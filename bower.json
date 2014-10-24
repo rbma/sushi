@@ -1,0 +1,13 @@
+{
+  "name": "sushi",
+  "version": "0.0.0",
+  "authors": [
+    "James Pants <jamespants@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "three.js": "*",
+    "handlebars": "~2.0.0"
+  }
+}
