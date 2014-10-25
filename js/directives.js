@@ -1,0 +1,1 @@
+(function(){var i;i=angular.module("sushiDirectives",[])}).call(this);

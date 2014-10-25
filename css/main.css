@@ -1,23 +1,151 @@
+/*
+ * Legal Disclaimer
+ *
+ * These Fonts are licensed only for use on these domains and their subdomains:
+ * redbullmusicacademy.com
+ *
+ * It is illegal to download or use them on other websites.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2014
+ */
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/lineto-circular-mediumitalic.eot");
+  src: url("../fonts/lineto-circular-mediumitalic.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-mediumitalic.woff") format("woff"), url("../fonts/lineto-circular-mediumitalic.ttf") format("truetype"), url("../fonts/lineto-circular-mediumitalic.svg#lineto-circular-mediumitalic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/lineto-circular-bold.eot");
+  src: url("../fonts/lineto-circular-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-bold.woff") format("woff"), url("../fonts/lineto-circular-bold.ttf") format("truetype"), url("../fonts/lineto-circular-bold.svg#lineto-circular-bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/lineto-circular-black.eot");
+  src: url("../fonts/lineto-circular-black.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-black.woff") format("woff"), url("../fonts/lineto-circular-black.ttf") format("truetype"), url("../fonts/lineto-circular-black.svg#lineto-circular-black") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/lineto-circular-bolditalic.eot");
+  src: url("../fonts/lineto-circular-bolditalic.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-bolditalic.woff") format("woff"), url("../fonts/lineto-circular-bolditalic.ttf") format("truetype"), url("../fonts/lineto-circular-bolditalic.svg#lineto-circular-bolditalic") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/lineto-circular-book.eot");
+  src: url("../fonts/lineto-circular-book.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-book.woff") format("woff"), url("../fonts/lineto-circular-book.ttf") format("truetype"), url("../fonts/lineto-circular-book.svg#lineto-circular-book") format("svg");
+  font-weight: lighter;
+  font-style: normal; }
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/lineto-circular-medium.eot");
+  src: url("../fonts/lineto-circular-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-medium.woff") format("woff"), url("../fonts/lineto-circular-medium.ttf") format("truetype"), url("../fonts/lineto-circular-medium.svg#lineto-circular-medium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Circular";
+  src: url("../fonts/lineto-circular-bookitalic.eot");
+  src: url("../fonts/lineto-circular-bookitalic.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-bookitalic.woff") format("woff"), url("../fonts/lineto-circular-bookitalic.ttf") format("truetype"), url("../fonts/lineto-circular-bookitalic.svg#lineto-circular-bookitalic") format("svg");
+  font-weight: lighter;
+  font-style: italic; }
 html {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  font-size: 16px;
+  margin: 0;
+  color: white;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent; }
 
 body {
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: black;
   margin: 0;
   overflow: hidden;
   text-align: center;
-  background-color: cover; }
+  background-color: cover;
+  font-family: "Circular", helvetica, sans-serif; }
 
-#player {
-  width: 400px;
-  height: 300px;
-  background: transparent;
-  display: inline-block;
-  z-index: -1; }
-  #player iframe, #player object, #player embed {
-    max-width: 400px;
-    max-height: 300px;
-    background-color: transparent; }
+a {
+  text-decoration: none;
+  color: white; }
+
+button {
+  font-family: "Circular", helvetica, sans-serif;
+  font-weight: lighter; }
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+  cursor: pointer !important; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+.index-wrapper {
+  position: relative;
+  margin: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: white; }
+  .index-wrapper .info {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px; }
+    .index-wrapper .info i, .index-wrapper .info a {
+      line-height: 50px;
+      font-size: 2em; }
+  .index-wrapper #player {
+    margin-top: 50px; }
+    .index-wrapper #player iframe, .index-wrapper #player object, .index-wrapper #player embed {
+      border-style: solid;
+      border-width: 26px 0px 27px;
+      -moz-border-image: url(http://www.animated-gifs.eu/kitchen-asian/0003.gif) 152 24 152 27 repeat;
+      -webkit-border-image: url(http://www.animated-gifs.eu/kitchen-asian/0003.gif) 152 24 152 27 repeat;
+      -o-border-image: url(http://www.animated-gifs.eu/kitchen-asian/0003.gif) 152 24 152 27 repeat;
+      border-image: url(http://www.animated-gifs.eu/kitchen-asian/0003.gif) 152 24 152 27 fill repeat; }
+  .index-wrapper .channel-group {
+    margin-top: 15px; }
+    .index-wrapper .channel-group button {
+      margin: 5px;
+      color: white;
+      background-color: black;
+      border: 1px solid white;
+      width: auto;
+      min-width: 100px;
+      text-transform: uppercase;
+      height: 35px;
+      outline: none; }
+      .index-wrapper .channel-group button:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black; }
+
+.info-wrapper {
+  position: relative;
+  margin: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: white; }
+  .info-wrapper .info {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px; }
+    .info-wrapper .info i, .info-wrapper .info a {
+      line-height: 50px;
+      font-size: 2em; }

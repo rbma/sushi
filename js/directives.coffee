@@ -1,0 +1,1 @@
+sushiDirectives = angular.module('sushiDirectives', [])
