@@ -98,8 +98,8 @@ button {
   height: 100%;
   height: 100%;
   overflow: scroll;
-  color: white;
-  background-color: black; }
+  color: black;
+  background-color: white; }
   .index-wrapper .info {
     position: fixed;
     top: 20px;
@@ -108,7 +108,8 @@ button {
     height: 50px; }
     .index-wrapper .info i, .index-wrapper .info a {
       line-height: 50px;
-      font-size: 2em; }
+      font-size: 2em;
+      color: black; }
   .index-wrapper h1 {
     text-transform: uppercase;
     margin: 0;
@@ -134,17 +135,17 @@ button {
     margin-top: 15px; }
     .index-wrapper .channel-group button {
       margin: 5px;
-      color: white;
-      background-color: black;
-      border: 1px solid white;
+      color: black;
+      background-color: white;
+      border: 1px solid black;
       width: auto;
       min-width: 100px;
       text-transform: uppercase;
       height: 35px;
       outline: none; }
       .index-wrapper .channel-group button:hover {
-        background-color: white;
-        color: black;
+        background-color: black;
+        color: white;
         border: 1px solid black; }
 
 .info-wrapper {
@@ -155,7 +156,7 @@ button {
   height: 100%;
   overflow: hidden;
   margin: 0 !important;
-  background-color: black !important;
+  background-color: white;
   color: black; }
   .info-wrapper iframe {
     position: fixed;
@@ -174,7 +175,7 @@ button {
     .info-wrapper .info i, .info-wrapper .info a {
       line-height: 50px;
       font-size: 2em;
-      color: white; }
+      color: black; }
   .info-wrapper .text-box {
     width: 60%;
     position: absolute;
