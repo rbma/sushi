@@ -15,6 +15,7 @@ sushiControllers.controller('IndexCtrl', [
 		$scope.player = {}
 		$scope.sushi = {}
 
+
 		
 		contentfulClient.entries({'content_type': '1aSBU2rdZSKAUK4GUQ8iKy','include': 1}).then (data) ->
 			$scope.sushi = data[0]
@@ -32,6 +33,29 @@ sushiControllers.controller('IndexCtrl', [
 
 		$scope.switchVid = (episode) ->
 			$scope.player.loadVideoByID(episode)
+
+])
+
+
+
+
+
+sushiControllers.controller('InfoControl', [
+	'$scope'
+	'$http'
+	'contentfulClient'
+	($scope, $http, contentfulClient) ->
+
+		$scope.sushi = {}
+
+		$scope.title = "Sushi"
+
+
+		contentfulClient.entries({'sys.id': 'RSlBbwxiQ622C6iiwOG2e','include': 1}).then (data) ->
+			$scope.sushi = data[0]
+			console.log $scope.sushi
+			
+			#set up all brightcove params
 
 ])
 

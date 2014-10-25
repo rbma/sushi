@@ -11,8 +11,8 @@ sushiServices.factory('brightCoveService', ['$rootScope', ($rootScope) ->
 	videoPlayer = {}
 	vidRatio = 640 / 360
 
-	width =  $(window).width() / 2
-	height = ($(window).width() / 2) / vidRatio
+	width =  $(window).width() / 2.5
+	height = ($(window).width() / 2.5) / vidRatio
 
 
 	addPlayer = ->
@@ -62,11 +62,6 @@ sushiServices.factory('brightCoveService', ['$rootScope', ($rootScope) ->
 
 
 
-
-
-
-
-
 	return{
 		init: (videoId)->
 			init(videoId)
@@ -74,5 +69,4 @@ sushiServices.factory('brightCoveService', ['$rootScope', ($rootScope) ->
 	}
 
 ])
-
 
