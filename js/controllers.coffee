@@ -48,8 +48,6 @@ sushiControllers.controller('InfoControl', [
 
 		$scope.sushi = {}
 
-		$scope.title = "Sushi"
-
 
 		contentfulClient.entries({'sys.id': 'RSlBbwxiQ622C6iiwOG2e','include': 1}).then (data) ->
 			$scope.sushi = data[0]
