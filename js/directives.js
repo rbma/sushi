@@ -1,0 +1,1 @@
+(function(){var i;i=angular.module("sushiDirectives",[]),i.directive("fullsize",function(){var i;return i=function(i,t,n){var r,e;return e=$(window).width(),r=$(window).height(),t.css({width:e,height:r,backgroundColor:"white",top:0})},{link:i}})}).call(this);

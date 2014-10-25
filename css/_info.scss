@@ -1,0 +1,120 @@
+.info-wrapper{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0 !important;
+	background-color: black;
+	color: black;
+	iframe{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.info{
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		width: 50px;
+		height: 50px;
+		color: black;
+		z-index: 9999;
+		i,a{
+			line-height: 50px;
+			font-size: 2em;
+			color: white;
+		}
+	}
+
+	.text-box{
+		width: 60%;
+		position: absolute;
+		left: 20%;
+		top: 10%;
+		height: 80%;
+		box-sizing: border-box;
+		overflow-y: scroll;
+		background-color: white;
+		border: 3px solid black;
+		color: black;
+		opacity: 0.95;
+		padding-bottom: 100px;
+		h1{
+			font-size: 3em;
+			text-transform: uppercase;
+			margin: 0;
+		}
+		.logo{
+			position: relative;
+			display: block;
+			text-align: center;
+			margin: 0;
+			margin-top: 20px;
+			img{
+				max-width: 50px;
+			}
+		}
+		a,i{
+			color: black;
+		}
+		p{
+			width: 90%;
+			margin-left: 5%;
+			line-height: 1.5;
+			font-weight: lighter;
+		}
+		h3.subhead, h3.casthead{
+			margin-top: 20%;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 2em;
+		}
+		.sushi, .cast{
+			text-align: left;
+			width: 100%;
+			height: auto;
+			display: block;
+			.item{
+				display: block;
+				width: 100%;
+				position: relative;
+				height: 200px;
+				// border-top: 1px solid black;
+				// border-bottom: 1px solid black;
+				box-sizing: border-box;
+				.image{
+					position: absolute;
+					left: 5%;
+					top: 0;
+					width: 40%;
+					height: 100%;
+					display: inline;
+					background-size: cover;
+					background-repeat: no-repeat;
+					background-position: center center;
+				}
+				.text{
+					position: absolute;
+					right: 0;
+					top: 0;
+					float: right;
+					display: inline;
+					width: 50%;
+					h3{
+						margin-left: 5%;
+					}
+					p{
+						max-width: 90%;
+						margin-left: 5%;
+					}
+				}
+
+			}
+
+		}
+	}
+}

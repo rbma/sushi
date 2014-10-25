@@ -1,0 +1,13 @@
+.index-wrapper
+	.logo
+		img(src="img/logo.png")
+	.info
+		a(class="fa fa-info-circle", ng-href="/#/info")
+	
+	h1 {{sushi.fields.title}}
+	div(id="player")
+	
+	.channel-group
+		button(data-episode="{{sushi.fields.brightcoveId1}}", ng-click="switchVid(sushi.fields.brightcoveId1)") Tokimonsta
+		button(data-episode="{{sushi.fields.brightcoveId2}}", ng-click="switchVid(sushi.fields.brightcoveId2)") Just Blaze
+		button(data-episode="{{sushi.fields.brightcoveId3}}", ng-click="switchVid(sushi.fields.brightcoveId3)") Some Other
