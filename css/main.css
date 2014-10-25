@@ -155,7 +155,7 @@ button {
   height: 100%;
   overflow: hidden;
   margin: 0 !important;
-  background-color: black;
+  background-color: black !important;
   color: black; }
   .info-wrapper iframe {
     position: fixed;
@@ -212,6 +212,13 @@ button {
       text-transform: uppercase;
       font-weight: bold;
       font-size: 2em; }
+      .info-wrapper .text-box h3.subhead:after, .info-wrapper .text-box h3.casthead:after {
+        content: '';
+        display: block;
+        width: 20%;
+        margin-left: 40%;
+        height: 4px;
+        background-color: black; }
     .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
       text-align: left;
       width: 100%;
@@ -245,3 +252,26 @@ button {
           .info-wrapper .text-box .sushi .item .text p, .info-wrapper .text-box .cast .item .text p {
             max-width: 90%;
             margin-left: 5%; }
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+  -webkit-transition: all linear .5s;
+  transition: all linear .5s;
+  -webkit-backface-visibility: hidden;
+  display: block;
+  width: 100%;
+  border-left: 1px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px; }
+
+.view-animate.ng-enter {
+  opacity: 0; }
+
+.view-animate.ng-enter.ng-enter-active {
+  opacity: 1; }
+
+.view-animate.ng-leave.ng-leave-active {
+  opacity: 0; }

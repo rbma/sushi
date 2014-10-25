@@ -6,7 +6,7 @@
 	height: 100%;
 	overflow: hidden;
 	margin: 0 !important;
-	background-color: black;
+	background-color: black !important;
 	color: black;
 	iframe{
 		position: fixed;
@@ -72,6 +72,14 @@
 			text-transform: uppercase;
 			font-weight: bold;
 			font-size: 2em;
+			&:after{
+				content: '';
+				display: block;
+				width: 20%;
+				margin-left: 40%;
+				height: 4px;
+				background-color: black;
+			}
 		}
 		.sushi, .cast{
 			text-align: left;

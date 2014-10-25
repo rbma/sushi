@@ -4,6 +4,7 @@ app = angular.module('sushi', [
 	'ngRoute'
 	'ngSanitize'
 	'ng-contentful'
+	'ngAnimate'
 	'duScroll'
 	'sushiControllers'
 	'sushiDirectives'
