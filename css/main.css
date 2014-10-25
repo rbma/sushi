@@ -142,11 +142,29 @@ button {
       min-width: 100px;
       text-transform: uppercase;
       height: 35px;
-      outline: none; }
-      .index-wrapper .channel-group button:hover {
-        background-color: black;
-        color: white;
-        border: 1px solid black; }
+      outline: none;
+      -webkit-box-shadow: 2px 2px 5px black;
+      -moz-box-shadow: 2px 2px 5px black;
+      -ms-box-shadow: 2px 2px 5px black;
+      -o-box-shadow: 2px 2px 5px black;
+      box-shadow: 2px 2px 5px black;
+      -webkit-transition: all 0.1s linear;
+      -moz-transition: all 0.1s linear;
+      -ms-transition: all 0.1s linear;
+      -o-transition: all 0.1s linear;
+      transition: all 0.1s linear; }
+      .index-wrapper .channel-group button:hover, .index-wrapper .channel-group button:active {
+        border: 1px solid black;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none;
+        -webkit-transform: translateX(2px) translateY(2px);
+        -moz-transform: translateX(2px) translateY(2px);
+        -ms-transform: translateX(2px) translateY(2px);
+        -o-transform: translateX(2px) translateY(2px);
+        transform: translateX(2px) translateY(2px); }
 
 .info-wrapper {
   position: absolute;

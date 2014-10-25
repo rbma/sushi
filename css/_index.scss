@@ -63,10 +63,12 @@
 			text-transform: uppercase;
 			height: 35px;
 			outline: none;
-			&:hover{
-				background-color: black;
-				color: white;
+			@include vendorize(box-shadow, 2px 2px 5px black);
+			@include vendorize(transition, all .1s linear);
+			&:hover, &:active{
 				border: 1px solid black;
+				@include vendorize(box-shadow, none);
+				@include vendorize(transform, translateX(2px) translateY(2px));
 			}
 		}
 	}
