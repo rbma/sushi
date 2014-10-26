@@ -6,6 +6,8 @@
 
 	
 	.text-box(du-scroll-container)
+		//- .border-top
+		.border-bottom
 		.logo
 			img(src="img/logo-invert.png")
 		h1 {{sushi.fields.title}}
@@ -13,20 +15,8 @@
 		a(href="#cast", du-smooth-scroll, class="fa fa-angle-double-down")
 		
 
-		h3(class="casthead", id="cast") Cast
-		.cast
-			.item
-				.image(style="background-image:url(img/justblaze.jpg)")
-				.text
-					h3 Just Blaze
-					p A lean cut of tuna. This is the inexpensive variety of tuna. When it comes to tuna, fatty cuts are more expensive.
 
-
-
-
-
-
-		h3(class="subhead") Common Sushi Types
+		h3(class="subhead") Menu
 		.sushi
 			
 			.item

@@ -18,7 +18,7 @@ body{
 	text-align: center;
 	// background: url(../img/sky2.jpg) no-repeat center center;
 	background-color: cover;
-	font-family: "Circular", helvetica, sans-serif;
+	font-family: clan, helvetica, sans-serif;
 }
 
 a{
@@ -26,8 +26,14 @@ a{
 	color: white;
 }
 
+p{
+	font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-weight: normal !important;
+}
+
 button{
-	font-family: "Circular", helvetica, sans-serif;
+	font-family: clan, helvetica, sans-serif;
 	font-weight: lighter;
 }
 

@@ -18,3 +18,4 @@ sushiDirectives.directive('fullsize', ->
 	}
 
 )
+

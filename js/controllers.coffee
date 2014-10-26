@@ -8,12 +8,24 @@ sushiControllers.controller('IndexCtrl', [
 	'$scope'
 	'$rootScope'
 	'$http'
+	'$sce'
 	'contentfulClient'
-	'brightCoveService'
-	($scope, $rootScope, $http, contentfulClient, brightCoveService) ->
+	($scope, $rootScope, $http, $sce, contentfulClient) ->
 
 		$scope.player = {}
 		$scope.sushi = {}
+		$scope.videReady = true
+		$scope.defaultEpisode = 3843098628001
+		$scope.clicked0 = false
+
+		#background-image
+
+
+
+
+		$scope.$watch('playing', ->
+			console.log $scope.playing
+		)
 
 
 		
@@ -21,8 +33,6 @@ sushiControllers.controller('IndexCtrl', [
 			$scope.sushi = data[0]
 			console.log $scope.sushi
 			
-			#set up all brightcove params
-			brightCoveService.init($scope.sushi.fields.brightcoveId1)
 
 		
 		
@@ -33,6 +43,21 @@ sushiControllers.controller('IndexCtrl', [
 
 		$scope.switchVid = (episode) ->
 			$scope.player.loadVideoByID(episode)
+
+
+		$scope.playVideo = (index) ->
+			if index == 0
+				$scope.clicked0 = true
+			if index == 1
+				$scope.clicked1 = true
+			if index == 2
+				$scope.clicked2 = true
+			else
+				return
+
+		#allow editors html
+		$scope.trust = (body) ->
+			return $sce.trustAsHtml(body)
 
 ])
 
@@ -53,8 +78,6 @@ sushiControllers.controller('InfoControl', [
 			$scope.sushi = data[0]
 			console.log $scope.sushi
 			
-			#set up all brightcove params
-
 ])
 
 

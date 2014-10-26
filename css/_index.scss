@@ -6,70 +6,164 @@
 	width: 100%;
 	height: 100%;
 	height: 100%;
-	overflow: scroll;
-	color: black;
-	background-color:white;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	color: white;
+	background-color:black;
 	.info{
 		position: fixed;
 		top: 20px;
-		right: 20px;
+		right: 40px;
 		width: 50px;
 		height: 50px;
+		z-index: 999;
 		i,a{
 			line-height: 50px;
 			font-size: 2em;
-			color: black;
+			padding-left: 10px;
+			padding-right: 10px;
+			color: white;
+			@include vendorize(transition, all .2s linear);
 		}
 	}
 
-	h1{
-		text-transform: uppercase;
-		margin: 0;
-		font-size: 3em;	
-	}
 
-	.logo{
+
+
+	.player{
+		opacity: 1;
+		margin: 0;
+		width: 90%;
 		position: relative;
-		display: block;
-		text-align: center;
-		margin: 0;
-		margin-top: 20px;
-		img{
-			max-width: 60px;
-		}
-	}
-
-	#player{
-		margin-top: 0;
-		iframe, object, embed{
-			border-style: solid;
-			border-width: 26px 0px 27px;
-			-moz-border-image: url(http://www.animated-gifs.eu/kitchen-asian/0003.gif) 152 24 152 27 repeat;
-			-webkit-border-image: url(http://www.animated-gifs.eu/kitchen-asian/0003.gif) 152 24 152 27 repeat;
-			-o-border-image: url(http://www.animated-gifs.eu/kitchen-asian/0003.gif) 152 24 152 27 repeat;
-			border-image: url(http://www.animated-gifs.eu/kitchen-asian/0003.gif) 152 24 152 27 fill repeat;
-		}
-	}
-
-	.channel-group{
-		margin-top: 15px;
-		button{
-			margin: 5px;
-			color: black;
-			background-color: white;
-			border: 1px solid black;
-			width: auto;
-			min-width: 100px;
-			text-transform: uppercase;
-			height: 35px;
-			outline: none;
-			@include vendorize(box-shadow, 2px 2px 5px black);
-			@include vendorize(transition, all .1s linear);
-			&:hover, &:active{
-				border: 1px solid black;
-				@include vendorize(box-shadow, none);
-				@include vendorize(transform, translateX(2px) translateY(2px));
+		padding-bottom: 45%;
+		padding-top: 0;
+		height: 10%;
+		overflow: hidden;
+		margin-left: 5%;
+		z-index: 99;
+		div{
+			width: 100%;
+			height: 100%;
+			iframe, object, embed{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100% !important;
+				height: 100% !important;
 			}
 		}
+
 	}
+
+
+	.player-frame{
+		opacity: 1;
+		@include vendorize(background-size, cover);
+		background-repeat: no-repeat;
+		background-position: center center;
+		position: relative;
+		display: block;
+		margin: 0;
+		top: 0;
+		width:100%;
+		height: 100%;
+		overflow: hidden;
+		.play-button{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-color: transparent;
+			z-index: 9;
+			top: 0;
+			left: 0;
+		}
+		&.black{
+			background-image: none !important;
+		}
+	}
+
+
+	// .channel-group{
+	// 	position: relative;
+	// 	margin-top: 25px;
+	// 	button{
+	// 		margin: 5px;
+	// 		color: white;
+	// 		background-color: black;
+	// 		border: 1px solid white;
+	// 		width: auto;
+	// 		min-width: 100px;
+	// 		text-transform: uppercase;
+	// 		height: 35px;
+	// 		outline: none;
+	// 		@include vendorize(transition, all .1s linear);
+	// 		&:hover, &:active{
+	// 			border: 1px solid black;
+	// 			background-color: white;
+	// 			color: black;
+	// 		}
+	// 	}
+	// }
+}
+
+
+%border {
+  position: fixed;
+  background: black;
+}
+
+.border--top {
+  @extend %border;
+  width: 100%;
+  height: 32px;
+  top: 0;
+  left: 0;
+}
+
+.border--right {
+  @extend %border;
+  height: 100%;
+  width: 32px;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.border--bottom {
+  @extend %border;
+  width: 100%;
+  height: 32px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.border--left {
+  @extend %border;
+  height: 100%;
+  width: 32px;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.bg--01 {
+  background: url('../img/001.gif');
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-position: right;
+}
+
+.bg--02 {
+  background: url('../img/002.gif');
+  background-repeat: repeat-y;
+  background-position: left;
+  background-size: 100%;
+} 
+
+.bg--03 {
+  background: url('../img/003.gif');
+  background-size: 500px;
+  background-position: bottom;
+  background-repeat: repeat-x;
 }

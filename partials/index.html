@@ -1,12 +1,14 @@
 
 <div class="index-wrapper">
-  <div class="logo"><img src="img/logo-invert.png"/></div>
   <div class="info"><a href="#/info" class="fa fa-info-circle"></a></div>
-  <h1>{{sushi.fields.title}}</h1>
-  <div id="player"></div>
-  <div class="channel-group">
-    <button data-episode="{{sushi.fields.brightcoveId1}}" ng-click="switchVid(sushi.fields.brightcoveId1)">Tokimonsta</button>
-    <button data-episode="{{sushi.fields.brightcoveId2}}" ng-click="switchVid(sushi.fields.brightcoveId2)">Just Blaze</button>
-    <button data-episode="{{sushi.fields.brightcoveId3}}" ng-click="switchVid(sushi.fields.brightcoveId3)">Some Other</button>
+  <div class="border--right bg--01"></div>
+  <div class="border--left bg--02"></div>
+  <div class="border--bottom bg--03"></div>
+  <div ng-repeat="episode in sushi.fields.episodes" ng-class="{black: clicked{{$index}}}" style="background-image:url({{episode.fields.image.fields.file.url}})" class="player-frame">
+    <div ng-click="playVideo($index)" class="play-button"></div>
+    <div ng-show="clicked{{$index}}" class="player">
+      <div ng-bind-html="trust(episode.fields.brightcoveId)"></div>
+    </div>
   </div>
+  
 </div>
