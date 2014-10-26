@@ -58,6 +58,8 @@
 
 	.player-frame{
 		opacity: 1;
+		border-bottom: 10px solid white;
+		box-sizing: border-box;
 		@include vendorize(background-size, cover);
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -83,27 +85,6 @@
 	}
 
 
-	// .channel-group{
-	// 	position: relative;
-	// 	margin-top: 25px;
-	// 	button{
-	// 		margin: 5px;
-	// 		color: white;
-	// 		background-color: black;
-	// 		border: 1px solid white;
-	// 		width: auto;
-	// 		min-width: 100px;
-	// 		text-transform: uppercase;
-	// 		height: 35px;
-	// 		outline: none;
-	// 		@include vendorize(transition, all .1s linear);
-	// 		&:hover, &:active{
-	// 			border: 1px solid black;
-	// 			background-color: white;
-	// 			color: black;
-	// 		}
-	// 	}
-	// }
 }
 
 

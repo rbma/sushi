@@ -109,6 +109,8 @@ button {
         height: 100% !important; }
   .index-wrapper .player-frame {
     opacity: 1;
+    border-bottom: 10px solid white;
+    box-sizing: border-box;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -ms-background-size: cover;
