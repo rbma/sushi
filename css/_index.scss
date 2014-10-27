@@ -10,6 +10,9 @@
 	overflow-x: hidden;
 	color: white;
 	background-color:black;
+	-webkit-overflow-scrolling: touch;
+	-webkit-backface-visibility: hidden;
+
 	.info{
 		position: fixed;
 		top: 20px;
@@ -60,6 +63,7 @@
 				left: 0;
 				width: 100% !important;
 				height: 100% !important;
+				z-index: 999;
 			}
 		}
 		@media (max-width: 1024px){
@@ -86,6 +90,8 @@
 		width:100%;
 		height: 100%;
 		overflow: hidden;
+		//- Fix for overflow scrolling
+		-webkit-transform: translate3d(0, 0, 0);
 		.title-wrapper{
 			width: 100%;
 			height: 100%;
@@ -152,6 +158,8 @@
 			}
 			@media (max-width: 768px){
 				margin-top: 0;
+				width: 10%;
+				left: 45%;
 			}
 		}
 

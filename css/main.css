@@ -34,8 +34,7 @@ body {
   overflow: hidden;
   text-align: center;
   background-color: cover;
-  font-family: clan, helvetica, sans-serif;
-  -webkit-overflow-scrolling: touch; }
+  font-family: clan, helvetica, sans-serif; }
 
 a {
   text-decoration: none;
@@ -61,6 +60,9 @@ button {
 .border--top, .border--right, .border--bottom, .border--left {
   position: fixed;
   background: black; }
+  @media (max-width: 1024px) {
+    .border--top, .border--right, .border--bottom, .border--left {
+      display: none; } }
 
 .border--top {
   width: 100%;
@@ -118,7 +120,9 @@ button {
   overflow-y: scroll;
   overflow-x: hidden;
   color: white;
-  background-color: black; }
+  background-color: black;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden; }
   .index-wrapper .info {
     position: fixed;
     top: 20px;
@@ -165,7 +169,8 @@ button {
         top: 0;
         left: 0;
         width: 100% !important;
-        height: 100% !important; }
+        height: 100% !important;
+        z-index: 999; }
     @media (max-width: 1024px) {
       .index-wrapper .player {
         margin-top: 10%; } }
@@ -188,7 +193,8 @@ button {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0); }
     .index-wrapper .player-frame .title-wrapper {
       width: 100%;
       height: 100%;
@@ -260,7 +266,9 @@ button {
         transform: scale(1.025); }
       @media (max-width: 768px) {
         .index-wrapper .player-frame .play-button {
-          margin-top: 0; } }
+          margin-top: 0;
+          width: 10%;
+          left: 45%; } }
     .index-wrapper .player-frame .episode-title {
       position: relative;
       width: 16%;
@@ -330,7 +338,7 @@ button {
     .info-wrapper .info i, .info-wrapper .info a {
       line-height: 50px;
       font-size: 2em; }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .info-wrapper .info {
         right: 20px; }
         .info-wrapper .info i, .info-wrapper .info a {
@@ -350,7 +358,7 @@ button {
       .info-wrapper .text-box {
         width: 76%;
         left: 12%; } }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .info-wrapper .text-box {
         width: 100%;
         height: 100%;
@@ -364,7 +372,7 @@ button {
       margin-top: 20px; }
       .info-wrapper .text-box .logo img {
         max-width: 50%; }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .info-wrapper .text-box .logo {
           margin-top: 30%; } }
     .info-wrapper .text-box a, .info-wrapper .text-box i {
@@ -409,7 +417,7 @@ button {
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center center; }
-          @media (max-width: 768px) {
+          @media (max-width: 767px) {
             .info-wrapper .text-box .sushi .item .image, .info-wrapper .text-box .cast .item .image {
               background-size: contain;
               background-position: top center; } }
