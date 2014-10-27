@@ -6,7 +6,7 @@
 	height: 100%;
 	overflow: hidden;
 	margin: 0 !important;
-	background-color: white;
+	background-color: black;
 	color: black;
 	iframe{
 		position: fixed;
@@ -26,7 +26,12 @@
 		i,a{
 			line-height: 50px;
 			font-size: 2em;
-			color: white
+		}
+		@media (max-width: 768px){
+			i,a{
+				color: black;
+			}
+			right: 20px;
 		}
 	}
 
@@ -41,12 +46,17 @@
 		color: black;
 		opacity: 0.95;
 		padding-bottom: 100px;
-		
-		h1{
-			font-size: 3em;
-			text-transform: uppercase;
-			margin: 0;
+		@media (max-width: 1024px){
+			width: 76%;
+			left: 12%;
 		}
+		@media (max-width: 768px){
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+		
 		.logo{
 			position: relative;
 			display: block;
@@ -54,16 +64,21 @@
 			margin: 0;
 			margin-top: 20px;
 			img{
-				max-width: 50px;
+				max-width: 50%;
+			}
+			@media (max-width:768px){
+				margin-top: 30%;
 			}
 		}
 		a,i{
 			color: black;
+			font-size: 3em;
 		}
 		p{
 			width: 90%;
 			margin-left: 5%;
 			line-height: 1.5;
+			font-size: 0.8em;
 			font-weight: lighter;
 		}
 		h3.subhead, h3.casthead{
@@ -95,12 +110,16 @@
 					position: absolute;
 					left: 5%;
 					top: 0;
-					width: 40%;
+					width: 30%;
 					height: 100%;
 					display: inline;
 					background-size: cover;
 					background-repeat: no-repeat;
 					background-position: center center;
+					@media (max-width: 768px){
+						background-size: contain;
+						background-position: top center;
+					}
 				}
 				.text{
 					position: absolute;
@@ -108,13 +127,15 @@
 					top: 0;
 					float: right;
 					display: inline;
-					width: 50%;
+					width: 60%;
 					h3{
 						margin-left: 5%;
+						margin-bottom: 0;
 					}
 					p{
 						max-width: 90%;
 						margin-left: 5%;
+						margin-top: 0;
 					}
 				}
 

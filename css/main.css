@@ -41,7 +41,7 @@ a {
   color: white; }
 
 p {
-  font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+  font-family: futura, 'Helvetica Neue', helvetica, arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: normal !important; }
 
@@ -276,7 +276,7 @@ button {
   height: 100%;
   overflow: hidden;
   margin: 0 !important;
-  background-color: white;
+  background-color: black;
   color: black; }
   .info-wrapper iframe {
     position: fixed;
@@ -294,8 +294,12 @@ button {
     z-index: 9999; }
     .info-wrapper .info i, .info-wrapper .info a {
       line-height: 50px;
-      font-size: 2em;
-      color: white; }
+      font-size: 2em; }
+    @media (max-width: 768px) {
+      .info-wrapper .info {
+        right: 20px; }
+        .info-wrapper .info i, .info-wrapper .info a {
+          color: black; } }
   .info-wrapper .text-box {
     width: 60%;
     position: relative;
@@ -307,10 +311,16 @@ button {
     color: black;
     opacity: 0.95;
     padding-bottom: 100px; }
-    .info-wrapper .text-box h1 {
-      font-size: 3em;
-      text-transform: uppercase;
-      margin: 0; }
+    @media (max-width: 1024px) {
+      .info-wrapper .text-box {
+        width: 76%;
+        left: 12%; } }
+    @media (max-width: 768px) {
+      .info-wrapper .text-box {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0; } }
     .info-wrapper .text-box .logo {
       position: relative;
       display: block;
@@ -318,13 +328,18 @@ button {
       margin: 0;
       margin-top: 20px; }
       .info-wrapper .text-box .logo img {
-        max-width: 50px; }
+        max-width: 50%; }
+      @media (max-width: 768px) {
+        .info-wrapper .text-box .logo {
+          margin-top: 30%; } }
     .info-wrapper .text-box a, .info-wrapper .text-box i {
-      color: black; }
+      color: black;
+      font-size: 3em; }
     .info-wrapper .text-box p {
       width: 90%;
       margin-left: 5%;
       line-height: 1.5;
+      font-size: 0.8em;
       font-weight: lighter; }
     .info-wrapper .text-box h3.subhead, .info-wrapper .text-box h3.casthead {
       margin-top: 20%;
@@ -353,24 +368,30 @@ button {
           position: absolute;
           left: 5%;
           top: 0;
-          width: 40%;
+          width: 30%;
           height: 100%;
           display: inline;
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center center; }
+          @media (max-width: 768px) {
+            .info-wrapper .text-box .sushi .item .image, .info-wrapper .text-box .cast .item .image {
+              background-size: contain;
+              background-position: top center; } }
         .info-wrapper .text-box .sushi .item .text, .info-wrapper .text-box .cast .item .text {
           position: absolute;
           right: 0;
           top: 0;
           float: right;
           display: inline;
-          width: 50%; }
+          width: 60%; }
           .info-wrapper .text-box .sushi .item .text h3, .info-wrapper .text-box .cast .item .text h3 {
-            margin-left: 5%; }
+            margin-left: 5%;
+            margin-bottom: 0; }
           .info-wrapper .text-box .sushi .item .text p, .info-wrapper .text-box .cast .item .text p {
             max-width: 90%;
-            margin-left: 5%; }
+            margin-left: 5%;
+            margin-top: 0; }
 
 .view-animate.ng-enter, .view-animate.ng-leave {
   -webkit-transition: all linear .5s;
