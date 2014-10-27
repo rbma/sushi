@@ -34,7 +34,8 @@ body {
   overflow: hidden;
   text-align: center;
   background-color: cover;
-  font-family: clan, helvetica, sans-serif; }
+  font-family: clan, helvetica, sans-serif;
+  -webkit-overflow-scrolling: touch; }
 
 a {
   text-decoration: none;
@@ -142,6 +143,9 @@ button {
         -ms-transform: rotate(20deg);
         -o-transform: rotate(20deg);
         transform: rotate(20deg); }
+    @media (max-width: 768px) {
+      .index-wrapper .info {
+        right: 20px; } }
   .index-wrapper .player {
     opacity: 1;
     margin: 0;
@@ -162,6 +166,12 @@ button {
         left: 0;
         width: 100% !important;
         height: 100% !important; }
+    @media (max-width: 1024px) {
+      .index-wrapper .player {
+        margin-top: 10%; } }
+    @media (max-width: 768px) {
+      .index-wrapper .player {
+        margin-top: 35%; } }
   .index-wrapper .player-frame {
     opacity: 1;
     border-bottom: 2px solid white;
@@ -203,6 +213,10 @@ button {
         -ms-transform: scale(1.1);
         -o-transform: scale(1.1);
         transform: scale(1.1); }
+      @media (max-width: 768px) {
+        .index-wrapper .player-frame .prev-episode {
+          width: 30%;
+          margin-left: 35%; } }
     .index-wrapper .player-frame .title {
       position: relative;
       top: 15%;
@@ -213,6 +227,11 @@ button {
       height: 35%; }
       .index-wrapper .player-frame .title.last {
         top: -30px; }
+      @media (max-width: 768px) {
+        .index-wrapper .player-frame .title {
+          width: 40%;
+          left: 30%;
+          top: 5%; } }
     .index-wrapper .player-frame .play-button {
       width: 20%;
       height: 15%;
@@ -230,12 +249,18 @@ button {
       transition: all 0.1s linear; }
       .index-wrapper .player-frame .play-button.last {
         margin-top: -20px; }
+        @media (max-width: 768px) {
+          .index-wrapper .player-frame .play-button.last {
+            margin-top: -15%; } }
       .index-wrapper .player-frame .play-button:hover {
         -webkit-transform: scale(1.025);
         -moz-transform: scale(1.025);
         -ms-transform: scale(1.025);
         -o-transform: scale(1.025);
         transform: scale(1.025); }
+      @media (max-width: 768px) {
+        .index-wrapper .player-frame .play-button {
+          margin-top: 0; } }
     .index-wrapper .player-frame .episode-title {
       position: relative;
       width: 16%;
@@ -246,6 +271,11 @@ button {
         max-width: 100%; }
       .index-wrapper .player-frame .episode-title.last {
         margin-top: 10px; }
+      @media (max-width: 768px) {
+        .index-wrapper .player-frame .episode-title {
+          width: 40%;
+          margin-left: 30%;
+          margin-top: 5%; } }
     .index-wrapper .player-frame .next-episode {
       position: relative;
       width: 10%;
@@ -265,6 +295,10 @@ button {
         -ms-transform: scale(1.1);
         -o-transform: scale(1.1);
         transform: scale(1.1); }
+      @media (max-width: 768px) {
+        .index-wrapper .player-frame .next-episode {
+          width: 30%;
+          margin-left: 35%; } }
     .index-wrapper .player-frame.black {
       background-image: none !important; }
 
@@ -277,7 +311,8 @@ button {
   overflow: hidden;
   margin: 0 !important;
   background-color: black;
-  color: black; }
+  color: black;
+  -webkit-overflow-scrolling: touch; }
   .info-wrapper iframe {
     position: fixed;
     top: 0;

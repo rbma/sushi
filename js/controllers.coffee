@@ -24,9 +24,6 @@ sushiControllers.controller('IndexCtrl', [
 
 
 
-		$scope.$watch('playing', ->
-			console.log $scope.playing
-		)
 
 
 		
