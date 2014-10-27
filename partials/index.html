@@ -11,6 +11,7 @@
       <div class="episode-title"><img ng-src="{{episode.fields.artistTextImage.fields.file.url}}"/></div>
       <div class="next-episode"><a ng-href="#{{$index + 1}}" du-smooth-scroll="du-smooth-scroll"><img ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}"/></a></div>
     </div>
+    <div ng-show="clicked{{$index}}" ng-click="closePlayer($index)" class="player-exit"></div>
     <div class="player dontshow">
       <div ng-bind-html="trust(episode.fields.brightcoveId)"></div>
     </div>
@@ -22,6 +23,7 @@
       <div ng-click="playVideo($index)" class="play-button last"></div>
       <div class="episode-title last"><img ng-src="{{episode.fields.artistTextImage.fields.file.url}}"/></div>
     </div>
+    <div ng-show="clicked{{$index}}" ng-click="closePlayer($index)" class="player-exit"></div>
     <div class="player dontshow">
       <div ng-bind-html="trust(episode.fields.brightcoveId)"></div>
     </div>

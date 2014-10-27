@@ -19,14 +19,17 @@
 	.info{
 		position: fixed;
 		top: 20px;
-		right: 40px;
+		left: 40px;
 		width: 50px;
 		height: 50px;
 		color: white;
 		z-index: 9999;
-		i,a{
-			line-height: 50px;
-			font-size: 2em;
+		img{
+			max-width: 100%;
+			@include vendorize(transition, all .1s linear);
+			&:hover{
+				@include vendorize(transform, rotate(20deg));
+			}
 		}
 		@media (max-width: 767px){
 			i,a{

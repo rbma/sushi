@@ -8,6 +8,6 @@
 <path fill="#FFFFFF" d="M324.3,620.4c-119.6,0-217.5-97.9-217.5-217.5s97.9-217.5,217.5-217.5s217.5,97.9,217.5,217.5
 	S444.9,620.4,324.3,620.4z M324.3,205.2c-108.8,0-197.7,89-197.7,197.7s89,197.7,197.7,197.7S522,511.7,522,402.9
 	S434,205.2,324.3,205.2z"/>
-<rect x="160.5" y="347" fill="none" width="327.5" height="210"/>
-<text transform="matrix(1 0 0 1 178.4326 448.5332)" fill="#FFFFFF" font-family="'ClanPro-NarrUltra'" font-size="130">INFO</text>
+<rect x="256.9" y="324.6" fill="none" width="134.7" height="156.6"/>
+<text transform="matrix(1 0 0 1 256.9362 480.8295)" fill="#FFFFFF" font-family="'ClanPro-NarrUltra'" font-size="200">X</text>
 </svg>
