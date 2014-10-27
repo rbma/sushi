@@ -16,7 +16,7 @@
 		right: 50px;
 		width: 50px;
 		height: 50px;
-		z-index: 999;
+		z-index: 9999;
 		text-align: center;
 		img{
 			max-width: 100%;
@@ -24,6 +24,9 @@
 			color: white;
 			-webkit-font-smoothing: antialiased;
 			@include vendorize(transition, all .2s linear);
+			&:hover{
+				@include vendorize(transform, rotate(20deg));
+			}
 		}
 	}
 
@@ -44,7 +47,7 @@
 		height: 10%;
 		overflow: hidden;
 		margin-left: 5%;
-		z-index: 99;
+		z-index: 999;
 		div{
 			width: 100%;
 			height: 100%;
@@ -62,8 +65,8 @@
 
 	.player-frame{
 		opacity: 1;
-		border-bottom: 10px solid white;
-		box-sizing: border-box;
+		border-bottom: 2px solid white;
+		// box-sizing: border-box;
 		@include vendorize(background-size, cover);
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -74,16 +77,89 @@
 		width:100%;
 		height: 100%;
 		overflow: hidden;
+		.title-wrapper{
+			width: 100%;
+			height: 100%;
+			margin: 0;
+		}
+
+		.prev-episode{
+			position: relative;
+			width: 10%;
+			margin: 0;
+			text-align: center;
+			margin-left: 45%;
+			margin-top: 40px;
+			@include vendorize(transition, all .1s linear);
+			img{
+				max-width: 100%;
+			}
+			&:hover{
+				@include vendorize(transform, scale(1.1));
+			}
+		}
+
+		.title{
+			position: relative;
+			top: 15%;
+			background: url(../img/title.svg) no-repeat center center;
+			background-size: 100%;
+			width: 30%;
+			left: 35%;
+			height: 35%;
+			&.last{
+				top: -30px;
+			}
+		}
+
 		.play-button{
 			width: 20%;
-			height: 20%;
-			position: absolute;
-			background-color: transparent;
+			height: 15%;
+			position: relative;
 			background: url(../img/play.svg) no-repeat center center;
-			background-size: 50%;
+			background-size: contain;
 			z-index: 3;
-			top: 40%;
+			margin-top: 7.5%;
+			margin-bottom: 0;
 			left: 40%;
+			@include vendorize(transition, all .1s linear);
+			&.last{
+				margin-top: -20px;
+			}
+			&:hover{
+				@include vendorize(transform, scale(1.025));
+			}
+		}
+
+		.episode-title{
+			position: relative;
+			width: 16%;
+			text-align: center;
+			margin-left: 42%;
+			margin-top: 0;
+			
+			img{
+				max-width: 100%;
+			}
+			&.last{
+				margin-top: 10px;
+			}
+
+		}
+
+		.next-episode{
+			position: relative;
+			width: 10%;
+			text-align: center;
+			margin-left: 45%;
+			margin-top: 30px;
+			@include vendorize(transition, all .1s linear);
+			img{
+				max-width: 100%;
+			}
+			&:hover{
+				@include vendorize(transform, scale(1.1));
+			}
 		}
 		&.black{
 			background-image: none !important;

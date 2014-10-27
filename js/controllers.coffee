@@ -17,6 +17,7 @@ sushiControllers.controller('IndexCtrl', [
 		$scope.videReady = true
 		$scope.defaultEpisode = 3843098628001
 		$scope.clicked0 = false
+		$scope.videoPlaying = false
 
 		#background-image
 
@@ -46,6 +47,7 @@ sushiControllers.controller('IndexCtrl', [
 
 
 		$scope.playVideo = (index) ->
+			$scope.videoPlaying = true
 			if index == 0
 				$scope.clicked0 = true
 			if index == 1

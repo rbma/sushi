@@ -19,3 +19,18 @@ sushiDirectives.directive('fullsize', ->
 
 )
 
+
+sushiDirectives.directive('insertEpisodeTitle', ->
+
+	link = ($scope, element, attrs) ->
+
+		episode = attrs.index
+		alert episode
+
+
+	return{
+		link: link
+	}
+
+)
+

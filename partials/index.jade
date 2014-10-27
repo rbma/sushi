@@ -1,4 +1,4 @@
-.index-wrapper
+.index-wrapper(du-scroll-container)
 	.info
 		a(href="#/info")
 			img(src="img/info.svg")
@@ -10,8 +10,40 @@
 	.border--bottom.bg--03
 
 
-	.player-frame(ng-repeat="episode in sushi.fields.episodes", ng-class="{black: clicked{{$index}}}", style="background-image:url({{episode.fields.image.fields.file.url}})")
-		.play-button(ng-click="playVideo($index)")
+	.player-frame(ng-repeat="episode in sushi.fields.episodes", 
+		ng-class="{black: clicked{{$index}}}", 
+		style="background-image:url({{episode.fields.image.fields.file.url}})",
+		ng-if="!$last", id="{{$index}}")
+		
+
+		.title-wrapper(ng-show="!clicked{{$index}}")
+			.title
+			.play-button(ng-click="playVideo($index)")
+			.episode-title
+				img(ng-src="{{episode.fields.artistTextImage.fields.file.url}}")
+			.next-episode
+				a(ng-href="#{{$index + 1}}", du-smooth-scroll)
+					img(ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}")
+		.player(ng-show="clicked{{$index}}")
+			div(ng-bind-html="trust(episode.fields.brightcoveId)")
+
+
+	
+
+
+	.player-frame(ng-repeat="episode in sushi.fields.episodes", 
+		ng-class="{black: clicked{{$index}}}", 
+		style="background-image:url({{episode.fields.image.fields.file.url}})",
+		ng-if="$last", id="{{$index}}")
+		
+		.title-wrapper(ng-show="!clicked{{$index}}")
+			.prev-episode
+				a(ng-href="#{{$index - 1}}", du-smooth-scroll)
+					img(ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}")
+			.title.last
+			.play-button.last(ng-click="playVideo($index)")
+			.episode-title.last
+				img(ng-src="{{episode.fields.artistTextImage.fields.file.url}}")
 		.player(ng-show="clicked{{$index}}")
 			div(ng-bind-html="trust(episode.fields.brightcoveId)")
 
