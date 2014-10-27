@@ -1786,17 +1786,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/img\/blaze.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 293659,
-		"inputAbbreviatedPath": "\/img\/blaze.jpg",
-		"outputAbbreviatedPath": "\/img\/blaze.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/ebi.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1815,17 +1804,6 @@
 		"initialSize": 9082,
 		"inputAbbreviatedPath": "\/img\/ika.jpg",
 		"outputAbbreviatedPath": "\/img\/ika.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/justblaze.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 83177,
-		"inputAbbreviatedPath": "\/img\/justblaze.jpg",
-		"outputAbbreviatedPath": "\/img\/justblaze.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1885,28 +1863,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/samurai.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 886675,
-		"inputAbbreviatedPath": "\/img\/samurai.jpg",
-		"outputAbbreviatedPath": "\/img\/samurai.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/sushi-wall.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 135479,
-		"inputAbbreviatedPath": "\/img\/sushi-wall.jpg",
-		"outputAbbreviatedPath": "\/img\/sushi-wall.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/tako.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1914,17 +1870,6 @@
 		"initialSize": 15046,
 		"inputAbbreviatedPath": "\/img\/tako.jpg",
 		"outputAbbreviatedPath": "\/img\/tako.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/toki.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 308017,
-		"inputAbbreviatedPath": "\/img\/toki.jpg",
-		"outputAbbreviatedPath": "\/img\/toki.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2089,15 +2034,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/partials\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/partials\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/partials\/index.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -2108,6 +2044,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
+		},
+	"\/partials\/info.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/info.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/partials\/info.jade": {
 		"compileDebug": 1,
