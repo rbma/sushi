@@ -41,38 +41,7 @@
 		color: black;
 		opacity: 0.95;
 		padding-bottom: 100px;
-		@include vendorize(border-radius, 15px);
-		// .border-top{
-		// 	position: fixed;
-		// 	max-width: 100%;
-		// 	width: inherit;
-		// 	height: 50px;
-		// 	z-index: 9;
-		// 	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-		// 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-		// 	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-		// 	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-		// 	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
-		// 	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
-		// 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-		// }
-
-		// .border-bottom{
-		// 	position: fixed;
-		// 	max-width: 100%;
-		// 	width: inherit;
-		// 	bottom: 0;
-		// 	height: 0px;
-		// 	z-index: 9;
-		// 	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.99) 99%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-		// 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(99%,rgba(255,255,255,0.99)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-		// 	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.99) 99%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-		// 	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.99) 99%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-		// 	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.99) 99%,rgba(255,255,255,1) 100%); /* IE10+ */
-		// 	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.99) 99%,rgba(255,255,255,1) 100%); /* W3C */
-		// 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-
-		// }
+		
 		h1{
 			font-size: 3em;
 			text-transform: uppercase;
@@ -121,8 +90,6 @@
 				width: 100%;
 				position: relative;
 				height: 200px;
-				// border-top: 1px solid black;
-				// border-bottom: 1px solid black;
 				box-sizing: border-box;
 				.image{
 					position: absolute;

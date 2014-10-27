@@ -20,13 +20,26 @@ sushiDirectives.directive('fullsize', ->
 )
 
 
-sushiDirectives.directive('insertEpisodeTitle', ->
+sushiDirectives.directive('shrink', ->
+
+	
 
 	link = ($scope, element, attrs) ->
+		calc = ->
+			width = $(window).width()
 
-		episode = attrs.index
-		alert episode
+			newWidth = width - 28
 
+			element.css
+				width: newWidth + 'px'
+				left: '14px'
+
+		calc()
+
+		$(window).resize ->
+			calc()
+
+		
 
 	return{
 		link: link
