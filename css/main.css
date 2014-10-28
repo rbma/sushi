@@ -79,7 +79,7 @@ button {
 
 .border--bottom {
   width: 100%;
-  height: 15px;
+  height: 32px;
   bottom: 0;
   left: 0;
   z-index: 1; }
@@ -93,7 +93,7 @@ button {
 
 .bg--01 {
   background: url("../img/001.gif");
-  background-size: 15px;
+  background-size: contain;
   background-repeat: repeat-y;
   background-position: right; }
 
@@ -101,12 +101,12 @@ button {
   background: url("../img/002.gif");
   background-repeat: repeat-y;
   background-position: left;
-  background-size: 15px; }
+  background-size: contain; }
 
 .bg--03 {
   background: url("../img/003.gif");
-  background-position: bottom;
-  background-repeat: repeat;
+  background-position: top center;
+  background-repeat: repeat-x;
   background-size: contain; }
 
 .index-wrapper {
@@ -354,8 +354,8 @@ button {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%; }
+    width: 100% !important;
+    height: 100% !important; }
   .info-wrapper .info {
     position: fixed;
     top: 20px;
@@ -403,43 +403,54 @@ button {
         height: 100%;
         left: 0;
         top: 0; } }
-    .info-wrapper .text-box .logo {
-      position: relative;
-      display: block;
-      text-align: center;
-      margin: 0;
-      margin-top: 20px; }
-      .info-wrapper .text-box .logo img {
-        max-width: 50%; }
-      @media (max-width: 767px) {
-        .info-wrapper .text-box .logo {
-          margin-top: 30%; } }
-    .info-wrapper .text-box a, .info-wrapper .text-box i {
-      color: black;
-      font-size: 3em; }
-    .info-wrapper .text-box p {
-      width: 90%;
-      margin-left: 5%;
-      line-height: 1.5;
-      font-size: 0.8em;
-      font-weight: lighter; }
-    .info-wrapper .text-box h3.subhead, .info-wrapper .text-box h3.casthead {
-      margin-top: 20%;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 2em; }
-      .info-wrapper .text-box h3.subhead:after, .info-wrapper .text-box h3.casthead:after {
-        content: '';
+    .info-wrapper .text-box .info-intro {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%; }
+      .info-wrapper .text-box .info-intro .logo {
+        position: relative;
         display: block;
-        width: 20%;
-        margin-left: 40%;
-        height: 4px;
-        background-color: black; }
+        text-align: center;
+        margin: 0;
+        margin-top: 20px; }
+        .info-wrapper .text-box .info-intro .logo img {
+          max-width: 50%; }
+        @media (max-width: 767px) {
+          .info-wrapper .text-box .info-intro .logo {
+            margin-top: 30%; } }
+      .info-wrapper .text-box .info-intro a, .info-wrapper .text-box .info-intro i {
+        color: black;
+        font-size: 3em;
+        position: absolute;
+        bottom: 20px;
+        width: 10%;
+        left: 45%; }
+      .info-wrapper .text-box .info-intro p {
+        width: 90%;
+        margin-left: 5%;
+        line-height: 1.5;
+        font-size: 0.8em;
+        font-weight: lighter; }
     .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
       text-align: left;
       width: 100%;
       height: auto;
-      display: block; }
+      display: block;
+      position: absolute;
+      top: 100%; }
+      .info-wrapper .text-box .sushi h3.subhead, .info-wrapper .text-box .sushi h3.casthead, .info-wrapper .text-box .cast h3.subhead, .info-wrapper .text-box .cast h3.casthead {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2em; }
+        .info-wrapper .text-box .sushi h3.subhead:after, .info-wrapper .text-box .sushi h3.casthead:after, .info-wrapper .text-box .cast h3.subhead:after, .info-wrapper .text-box .cast h3.casthead:after {
+          content: '';
+          display: block;
+          width: 20%;
+          margin-left: 40%;
+          height: 4px;
+          background-color: black; }
       .info-wrapper .text-box .sushi .item, .info-wrapper .text-box .cast .item {
         display: block;
         width: 100%;
@@ -453,9 +464,9 @@ button {
           width: 30%;
           height: 100%;
           display: inline;
-          background-size: cover;
+          background-size: contain;
           background-repeat: no-repeat;
-          background-position: center center; }
+          background-position: top center; }
           @media (max-width: 767px) {
             .info-wrapper .text-box .sushi .item .image, .info-wrapper .text-box .cast .item .image {
               background-size: contain;

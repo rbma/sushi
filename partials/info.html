@@ -1,16 +1,16 @@
 
 <div class="info-wrapper">
-  <iframe fullsize="fullsize" src="http://edweena.github.io/sushi-3d/index.html" seamless="seamless" width="100%" height="500px" frameborder="0"></iframe>
   <div class="info"><a href="#/"><img src="img/exit-white.svg"/></a></div>
   <div class="border--right bg--01"></div>
   <div class="border--left bg--02"></div>
   <div shrink="shrink" class="border--bottom bg--03"></div>
   <div du-scroll-container="du-scroll-container" class="text-box">
-    <div class="border-bottom"></div>
-    <div class="logo"><img src="img/title-black.svg"/></div>
-    <p>{{sushi.fields.infoDescription}}</p><a href="#menu" du-smooth-scroll="du-smooth-scroll" offset="30" class="fa fa-angle-double-down"></a>
-    <h3 id="menu" class="subhead">Menu</h3>
-    <div class="sushi">			
+    <div class="info-intro">
+      <div class="logo"><img src="img/title-black.svg"/></div>
+      <p>{{sushi.fields.infoDescription}}</p><a href="#menu" du-smooth-scroll="du-smooth-scroll" offset="30" class="fa fa-angle-double-down"></a>
+    </div>
+    <div class="sushi">
+      <h3 id="menu" class="subhead">Menu	</h3>
       <div ng-repeat="item in sushi.fields.sushiTypes" class="item">
         <div style="background-image:url({{item.fields.image.fields.file.url}})" class="image"></div>
         <div class="text">
