@@ -22,3 +22,47 @@
 .view-animate.ng-leave.ng-leave-active {
   opacity: 0;
 }
+
+.ng-hide-add{
+  @include vendorize(animation, 0.5s lightOut ease);
+}
+
+.ng-hide-remove{
+  @include vendorize(animation, 0.5s lightIn ease);
+}
+
+@-webkit-keyframes lightOut{
+  0%{
+    opacity: 1
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes lightOut{
+  0%{
+    opacity: 1
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes lightIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes lightIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

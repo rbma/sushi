@@ -153,13 +153,13 @@ button {
   .index-wrapper .player {
     opacity: 1;
     margin: 0;
-    width: 90%;
+    width: 96%;
     position: relative;
     padding-bottom: 45%;
     padding-top: 0;
     height: 10%;
     overflow: hidden;
-    margin-left: 5%;
+    margin-left: 2%;
     z-index: 999; }
     .index-wrapper .player div {
       width: 100%;
@@ -497,3 +497,38 @@ button {
 
 .view-animate.ng-leave.ng-leave-active {
   opacity: 0; }
+
+.ng-hide-add {
+  -webkit-animation: 0.5s lightOut ease;
+  -moz-animation: 0.5s lightOut ease;
+  -ms-animation: 0.5s lightOut ease;
+  -o-animation: 0.5s lightOut ease;
+  animation: 0.5s lightOut ease; }
+
+.ng-hide-remove {
+  -webkit-animation: 0.5s lightIn ease;
+  -moz-animation: 0.5s lightIn ease;
+  -ms-animation: 0.5s lightIn ease;
+  -o-animation: 0.5s lightIn ease;
+  animation: 0.5s lightIn ease; }
+
+@-webkit-keyframes lightOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes lightOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@-webkit-keyframes lightIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes lightIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
