@@ -1,0 +1,70 @@
+.index-wrapper(du-scroll-container)
+	.info
+		a(href="#/info")
+			img(src="img/info-button.svg")
+
+	
+	//- SUSHI BORDERS
+	.border--right.bg--01
+	.border--left.bg--02
+	.border--bottom.bg--03(shrink)
+
+	div(id="player", ng-class="{stack: videoPlaying}", resize)
+	.player-exit(ng-show="videoPlaying", ng-click="closePlayer()")
+	.button-group(ng-show="videoPlaying")
+		.button
+			a(href="https://twitter.com/share?url={{sushi.fields.shareUrl}}/&text={{sushi.fields.twitterShareText}}", target="blank")
+				span(class="fa fa-twitter")
+	
+		.button
+			a(href="https://www.facebook.com/sharer/sharer.php?u={{sushi.fields.shareUrl}}/", target="blank")
+				span(class="fa fa-facebook")
+
+
+	
+
+
+
+	//-TOKI
+	.player-frame(ng-repeat="episode in sushi.fields.episodes", 
+		ng-show="!videoPlaying", 
+		style="background-image:url({{episode.fields.image.fields.file.url}})",
+		ng-if="!$last", id="{{$index}}",  class="{{episode.fields.brightcoveId}}")
+		
+
+		.title-wrapper(ng-show="!videoPlaying")
+			.title
+			.play-button(ng-click="playVideo(episode.fields.brightcoveId)")
+			.episode-title
+				img(ng-src="{{episode.fields.artistTextImage.fields.file.url}}")
+			.next-episode
+				a(ng-href="#{{$index + 1}}", du-smooth-scroll)
+					img(ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}")
+		
+
+
+	
+
+
+	.player-frame(ng-repeat="episode in sushi.fields.episodes", 
+		ng-show="!videoPlaying",
+		style="background-image:url({{episode.fields.image.fields.file.url}})",
+		ng-style="{stacklevel: currentVideo == episode.fields.brightcoveId}"
+		ng-if="$last", id="{{$index}}", data-episode="{{episode.fields.brightcoveId}}", class="{{episode.fields.brightcoveId}}")
+		
+		.title-wrapper(ng-show="!videoPlaying")
+			.prev-episode
+				a(ng-href="#{{$index - 1}}", du-smooth-scroll)
+					img(ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}")
+			.title.last
+			.play-button.last(ng-click="playVideo(episode.fields.brightcoveId)")
+			.episode-title.last
+				img(ng-src="{{episode.fields.artistTextImage.fields.file.url}}")
+
+
+
+
+
+
+
+	

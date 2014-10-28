@@ -1,0 +1,45 @@
+.info-wrapper
+	iframe(class="threed", fullsize, src="http://edweena.github.io/sushi-3d/index.html", seamless, width="100%", height="500px", frameborder=0)
+	
+	
+	.info
+		a(href="#/")
+			img(src="img/exit-white.svg")
+			img(class="black", src="img/exit-black.svg")
+
+
+	//- SUSHI BORDERS
+	.border--right.bg--01
+	.border--left.bg--02
+	.border--bottom.bg--03(shrink)
+
+	
+	.text-box(du-scroll-container)
+		.info-intro
+			.logo
+				img(src="img/title-black.svg")
+			p {{sushi.fields.infoDescription}}
+			a(href="#video", du-smooth-scroll, class="fa fa-angle-double-down")
+			.making-of-video(id="video", ng-bind-html="trust(sushi.fields.makingOfYoutubeId)")
+		
+
+
+		.sushi
+			h3(class="subhead", id="menu") Menu	
+			.item(ng-repeat="item in sushi.fields.sushiTypes")
+				.image(style="background-image:url({{item.fields.image.fields.file.url}})")
+				.text
+					h3 {{item.fields.title}}
+					p {{item.fields.description}}
+
+		.button-group
+				
+			.button
+				a(href="https://twitter.com/share?url={{sushi.fields.shareUrl}}/&text={{sushi.fields.twitterShareText}}", target="blank")
+					span(class="fa fa-twitter")
+
+					
+			.button
+				a(href="https://www.facebook.com/sharer/sharer.php?u={{sushi.fields.shareUrl}}/", target="blank")
+					span(class="fa fa-facebook")
+	
