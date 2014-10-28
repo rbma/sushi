@@ -1,3 +1,5 @@
+'use strict'
+
 sushiServices = angular.module('sushiServices', [])
 
 sushiServices.factory('brightCoveService', ['$rootScope', '$window', ($rootScope, $window) ->
@@ -93,3 +95,29 @@ sushiServices.factory('brightCoveService', ['$rootScope', '$window', ($rootScope
 	}
 
 ])
+
+
+
+
+#check for Web GL
+sushiServices.factory('webgl', ->
+
+	
+	supportsWebGL = ->
+		canvas = document.createElement( 'canvas' )
+		webgl = false
+		try
+			webgl = !!( canvas.getContext( 'webgl' ) || canvas.getContext( 'experimental-webgl' ) )
+				
+		catch e
+				
+		return webgl
+
+	
+	return{
+		checkWebGL: ->
+			supportsWebGL()
+	}
+
+)
+

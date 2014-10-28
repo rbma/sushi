@@ -126,9 +126,9 @@ button {
   .index-wrapper .info {
     position: fixed;
     top: 20px;
-    left: 40px;
-    width: 50px;
-    height: 50px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
     z-index: 9999;
     text-align: center; }
     .index-wrapper .info img {
@@ -147,9 +147,11 @@ button {
         -ms-transform: rotate(20deg);
         -o-transform: rotate(20deg);
         transform: rotate(20deg); }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .index-wrapper .info {
-        right: 20px; } }
+        left: 10px;
+        top: 10px;
+        position: fixed; } }
   .index-wrapper #player {
     opacity: 1;
     margin: 0;
@@ -174,18 +176,18 @@ button {
         height: 100% !important; }
     @media (max-width: 1024px) {
       .index-wrapper #player {
-        margin-top: 10%; } }
-    @media (max-width: 768px) {
+        margin-top: 25%; } }
+    @media (max-width: 767px) {
       .index-wrapper #player {
         margin-top: 35%; } }
     .index-wrapper #player.stack {
       z-index: 9; }
   .index-wrapper .player-exit {
     position: absolute;
-    top: 20px;
-    right: 40px;
-    width: 50px;
-    height: 50px;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
     z-index: 999999;
     background: url(../img/exit-white.svg) no-repeat center center;
     -webkit-transition: all 0.1s linear;
@@ -341,6 +343,8 @@ button {
           margin-left: 35%; } }
     .index-wrapper .player-frame.black {
       background-image: none !important; }
+    .index-wrapper .player-frame.stacklevel {
+      z-index: -1; }
 
 .info-wrapper {
   position: absolute;
@@ -352,17 +356,26 @@ button {
   margin: 0 !important;
   background-color: black;
   color: black;
-  -webkit-overflow-scrolling: touch; }
-  .info-wrapper iframe {
+  -webkit-overflow-scrolling: touch;
+  background: url(../img/sushi.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .info-wrapper iframe.threed {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100% !important;
-    height: 100% !important; }
+    width: 100%;
+    height: 100%; }
+    @media (max-width: 1024px) {
+      .info-wrapper iframe.threed {
+        display: none; } }
   .info-wrapper .info {
     position: fixed;
     top: 20px;
-    left: 40px;
+    right: 40px;
     width: 50px;
     height: 50px;
     color: white;
@@ -380,11 +393,16 @@ button {
         -ms-transform: rotate(20deg);
         -o-transform: rotate(20deg);
         transform: rotate(20deg); }
+      .info-wrapper .info img.black {
+        display: none; }
     @media (max-width: 767px) {
       .info-wrapper .info {
-        right: 20px; }
-        .info-wrapper .info i, .info-wrapper .info a {
-          color: black; } }
+        right: 10px;
+        top: 10px; }
+        .info-wrapper .info img {
+          display: none; }
+          .info-wrapper .info img.black {
+            display: block; } }
   .info-wrapper .text-box {
     width: 60%;
     position: relative;
@@ -407,7 +425,7 @@ button {
         left: 0;
         top: 0; } }
     .info-wrapper .text-box .info-intro {
-      position: absolute;
+      position: relative;
       top: 0;
       width: 100%;
       height: 100%; }
@@ -421,27 +439,53 @@ button {
           max-width: 50%; }
         @media (max-width: 767px) {
           .info-wrapper .text-box .info-intro .logo {
-            margin-top: 30%; } }
+            margin-top: 20%; } }
       .info-wrapper .text-box .info-intro a, .info-wrapper .text-box .info-intro i {
         color: black;
-        font-size: 3em;
-        position: absolute;
-        bottom: 40px;
-        width: 10%;
-        left: 45%; }
+        font-size: 3em; }
       .info-wrapper .text-box .info-intro p {
         width: 80%;
         margin-left: 10%;
         line-height: 1.5;
         font-size: 0.9em;
         font-weight: lighter; }
+      .info-wrapper .text-box .info-intro .making-of-video {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+        opacity: 1;
+        position: relative;
+        box-sizing: border-box;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        width: 90%;
+        margin-left: 5%;
+        z-index: 1;
+        background-size: cover !important; }
+        .info-wrapper .text-box .info-intro .making-of-video iframe, .info-wrapper .text-box .info-intro .making-of-video object, .info-wrapper .text-box .info-intro .making-of-video embed {
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
     .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
       text-align: left;
       width: 100%;
       height: auto;
       display: block;
-      position: absolute;
-      top: 100%; }
+      position: relative;
+      margin-top: 50%; }
+      @media (max-width: 767px) {
+        .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
+          margin-top: 150%; } }
       .info-wrapper .text-box .sushi h3.subhead, .info-wrapper .text-box .sushi h3.casthead, .info-wrapper .text-box .cast h3.subhead, .info-wrapper .text-box .cast h3.casthead {
         text-align: center;
         text-transform: uppercase;
@@ -483,6 +527,7 @@ button {
           width: 60%; }
           .info-wrapper .text-box .sushi .item .text h3, .info-wrapper .text-box .cast .item .text h3 {
             margin-left: 5%;
+            max-width: 90%;
             margin-bottom: 0; }
           .info-wrapper .text-box .sushi .item .text p, .info-wrapper .text-box .cast .item .text p {
             max-width: 90%;

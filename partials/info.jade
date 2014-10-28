@@ -1,9 +1,11 @@
 .info-wrapper
-	iframe(fullsize, src="http://edweena.github.io/sushi-3d/index.html", seamless, width="100%", height="500px", frameborder=0)
-
+	iframe(class="threed", fullsize, src="http://edweena.github.io/sushi-3d/index.html", seamless, width="100%", height="500px", frameborder=0)
+	
+	
 	.info
 		a(href="#/")
 			img(src="img/exit-white.svg")
+			img(class="black", src="img/exit-black.svg")
 
 
 	//- SUSHI BORDERS
@@ -17,7 +19,8 @@
 			.logo
 				img(src="img/title-black.svg")
 			p {{sushi.fields.infoDescription}}
-			a(href="#menu", du-smooth-scroll, offset="30", class="fa fa-angle-double-down")
+			a(href="#video", du-smooth-scroll, class="fa fa-angle-double-down")
+			.making-of-video(id="video", ng-bind-html="trust(sushi.fields.makingOfYoutubeId)")
 		
 
 

@@ -16,9 +16,9 @@
 	.info{
 		position: fixed;
 		top: 20px;
-		left: 40px;
-		width: 50px;
-		height: 50px;
+		left: 20px;
+		width: 60px;
+		height: 60px;
 		z-index: 9999;
 		text-align: center;
 		img{
@@ -31,8 +31,10 @@
 				@include vendorize(transform, rotate(20deg));
 			}
 		}
-		@media (max-width: 768px){
-			right: 20px;
+		@media (max-width: 767px){
+			left: 10px;
+			top: 10px;
+			position: fixed;
 		}
 	}
 
@@ -63,9 +65,9 @@
 			}
 		}
 		@media (max-width: 1024px){
-			margin-top: 10%;
+			margin-top: 25%;
 		}
-		@media (max-width: 768px){
+		@media (max-width: 767px){
 			margin-top: 35%;
 		}
 
@@ -77,10 +79,10 @@
 
 	.player-exit{
 		position: absolute;
-		top: 20px;
-		right: 40px;
-		width: 50px;
-		height: 50px;
+		top: 10px;
+		right: 10px;
+		width: 60px;
+		height: 60px;
 		z-index: 999999;
 		background: url(../img/exit-white.svg) no-repeat center center;
 		@include vendorize(transition, all .1s linear);
@@ -221,6 +223,9 @@
 		&.black{
 			background-image: none !important;
 			// background-color: transparent;
+		}
+		&.stacklevel{
+			z-index: -1;
 		}
 	}
 

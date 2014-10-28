@@ -13,10 +13,15 @@
 	.player-exit(ng-show="videoPlaying", ng-click="closePlayer()")
 
 
+	
+
+
+
+	//-TOKI
 	.player-frame(ng-repeat="episode in sushi.fields.episodes", 
 		ng-show="!videoPlaying", 
 		style="background-image:url({{episode.fields.image.fields.file.url}})",
-		ng-if="!$last", id="{{$index}}")
+		ng-if="!$last", id="{{$index}}",  class="{{episode.fields.brightcoveId}}")
 		
 
 		.title-wrapper(ng-show="!videoPlaying")
@@ -36,7 +41,8 @@
 	.player-frame(ng-repeat="episode in sushi.fields.episodes", 
 		ng-show="!videoPlaying",
 		style="background-image:url({{episode.fields.image.fields.file.url}})",
-		ng-if="$last", id="{{$index}}")
+		ng-style="{stacklevel: currentVideo == episode.fields.brightcoveId}"
+		ng-if="$last", id="{{$index}}", data-episode="{{episode.fields.brightcoveId}}", class="{{episode.fields.brightcoveId}}")
 		
 		.title-wrapper(ng-show="!videoPlaying")
 			.prev-episode

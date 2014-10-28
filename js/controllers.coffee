@@ -22,6 +22,7 @@ sushiControllers.controller('IndexCtrl', [
 		$scope.defaultEpisode = 3843098628001
 		$scope.clicked0 = false
 		$scope.videoPlaying = false
+		$scope.currentVideo = ""
 
 		#background-image
 
@@ -45,6 +46,7 @@ sushiControllers.controller('IndexCtrl', [
 
 		$scope.switchVid = (episode) ->
 			$scope.player.loadVideoByID(episode)
+			$scope.currentVideo = episode
 
 
 		$scope.playVideo = (id) ->
@@ -66,32 +68,44 @@ sushiControllers.controller('IndexCtrl', [
 
 
 
+
+
+
 sushiControllers.controller('InfoControl', [
 	'$scope'
 	'$http'
+	'$sce'
 	'contentfulClient'
-	($scope, $http, contentfulClient) ->
+	'webgl'
+	($scope, $http, $sce, contentfulClient, webgl) ->
 
 		$scope.sushi = {}
+
+		$scope.threed = webgl.checkWebGL()
+
+		$scope.webglsupport = false
+
+		if $scope.threed == false
+			$scope.webglsupport = false
+		else
+			$scope.webglsupport = true
+
+
+
 
 
 		contentfulClient.entries({'sys.id': 'RSlBbwxiQ622C6iiwOG2e','include': 1}).then (data) ->
 			$scope.sushi = data[0]
-			console.log $scope.sushi
+
+
+
+		#allow editors html
+		$scope.trust = (body) ->
+			return $sce.trustAsHtml(body)
+
 			
 ])
 
 
 
 
-
-
-
-
-sushiControllers.controller('InfoCtrl', [
-	'$scope'
-	'$http'
-	'contentfulClient'
-	($scope, $http, contentfulClient) ->
-		$scope.yo = ''
-])

@@ -1,3 +1,5 @@
+'use strict'
+
 sushiDirectives = angular.module('sushiDirectives', [])
 
 
@@ -10,7 +12,7 @@ sushiDirectives.directive('fullsize', ->
 		element.css
 			width: width
 			height: height
-			backgroundColor: 'white'
+			backgroundColor: 'black'
 			top: 0
 
 	return{

@@ -9,17 +9,23 @@
 	background-color: black;
 	color: black;
 	-webkit-overflow-scrolling: touch;
-	iframe{
+	background: url(../img/sushi.jpg) no-repeat center center;
+	@include vendorize(background-size, cover);
+	iframe.threed{
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100% !important;
-		height: 100% !important;
+		width: 100%;
+		height: 100%;
+		@media (max-width: 1024px){
+			display: none;
+		}
 	}
+
 	.info{
 		position: fixed;
 		top: 20px;
-		left: 40px;
+		right: 40px;
 		width: 50px;
 		height: 50px;
 		color: white;
@@ -30,12 +36,19 @@
 			&:hover{
 				@include vendorize(transform, rotate(20deg));
 			}
+			&.black{
+				display: none;
+			}
 		}
 		@media (max-width: 767px){
-			i,a{
-				color: black;
+			right: 10px;
+			top: 10px;
+			img{
+				display: none;
+				&.black{
+					display: block;
+				}
 			}
-			right: 20px;
 		}
 	}
 
@@ -61,7 +74,7 @@
 			top: 0;
 		}
 		.info-intro{
-			position: absolute;
+			position: relative;
 			top: 0;
 			width: 100%;
 			height: 100%;
@@ -76,16 +89,12 @@
 					max-width: 50%;
 				}
 				@media (max-width:767px){
-					margin-top: 30%;
+					margin-top: 20%;
 				}
 			}
 			a,i{
 				color: black;
 				font-size: 3em;
-				position: absolute;
-				bottom: 40px;
-				width: 10%;
-				left: 45%;
 			}
 			p{
 				width: 80%;
@@ -95,6 +104,38 @@
 				font-weight: lighter;
 			}
 
+			.making-of-video{
+				// @include vendorize(box-shadow, 2px 2px 15px black);
+				@include vendorize(backface-visibility, hidden);
+				opacity: 1;
+				position: relative;
+				box-sizing: border-box;
+				padding-bottom: 56.25%;
+				padding-top: 30px;
+				height: 0;
+				display: block;
+				overflow: hidden;
+				margin-bottom: 50px;
+				margin-top: 50px;
+				width: 90%;
+				margin-left: 5%;
+				z-index: 1;
+				background-size: cover !important;
+				iframe, object, embed{
+					position: absolute;
+					display: block;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+
+				}
+				@media (max-width: 1024px){
+				}
+				@media (max-width: 767px){
+
+				}
+			}
 		}
 		
 		.sushi, .cast{
@@ -102,8 +143,12 @@
 			width: 100%;
 			height: auto;
 			display: block;
-			position: absolute;
-			top: 100%;
+			position: relative;
+			margin-top: 50%;
+			@media (max-width: 767px){
+				margin-top: 150%;
+			}
+
 			h3.subhead, h3.casthead{
 				text-align: center;
 				text-transform: uppercase;
@@ -148,6 +193,7 @@
 					width: 60%;
 					h3{
 						margin-left: 5%;
+						max-width: 90%;
 						margin-bottom: 0;
 					}
 					p{
