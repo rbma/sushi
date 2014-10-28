@@ -50,17 +50,23 @@
 			div(ng-bind-html="trust(episode.fields.brightcoveId)")
 
 
+	//- MAKING OF
+	.player-frame(ng-class="{black: clicked2", style="background-image:url(img/making-of.jpg)", id="2")
+		
+		.title-wrapper(ng-show="!clicked2")
+			.prev-episode
+				a(ng-href="#1", du-smooth-scroll)
+					img(ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}")
+			.title.last
+			.play-button.last(ng-click="playVideo(2)")
+			.episode-title.last
+				img(ng-src="{{episode.fields.artistTextImage.fields.file.url}}")
+		.player-exit(ng-show="clicked2", ng-click="closePlayer(2)")
+		.player(class="dontshow")
+			div
+				iframe(width="560" height="315" src="//www.youtube.com/embed/qWBrpgHNxhY" frameborder="0" allowfullscreen)
+
+
+
+
 	
-	//- .player-frame-1
-	//- 	.play-button(ng-click="playVideo()")
-	//- 	div(id="player", ng-class="{visible: playing}")
-
-	//- .player-frame-2
-	//- 	.play-button(ng-click="playVideo2()")
-	//- 	div(id="player2", ng-class="{visible: playing2}")
-
-
-	//- .channel-group
-	//- 	button(data-episode="{{sushi.fields.brightcoveId1}}", ng-click="switchVid(sushi.fields.brightcoveId1)") Tokimonsta
-	//- 	button(data-episode="{{sushi.fields.brightcoveId2}}", ng-click="switchVid(sushi.fields.brightcoveId2)") Just Blaze
-	//- 	button(data-episode="{{sushi.fields.brightcoveId3}}", ng-click="switchVid(sushi.fields.brightcoveId3)") Some Other

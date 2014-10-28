@@ -1691,72 +1691,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/img\/6-Maguro-Sushi.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 297173,
-		"inputAbbreviatedPath": "\/img\/6-Maguro-Sushi.jpg",
-		"outputAbbreviatedPath": "\/img\/6-Maguro-Sushi.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/9088007739_a525127f6f.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 104998,
-		"inputAbbreviatedPath": "\/img\/9088007739_a525127f6f.jpg",
-		"outputAbbreviatedPath": "\/img\/9088007739_a525127f6f.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/dsc1665-as-smart-object-1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 368729,
-		"inputAbbreviatedPath": "\/img\/dsc1665-as-smart-object-1.jpg",
-		"outputAbbreviatedPath": "\/img\/dsc1665-as-smart-object-1.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/ebi.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 30538,
-		"inputAbbreviatedPath": "\/img\/ebi.jpg",
-		"outputAbbreviatedPath": "\/img\/ebi.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/engawa.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 5145,
-		"inputAbbreviatedPath": "\/img\/engawa.jpg",
-		"outputAbbreviatedPath": "\/img\/engawa.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/ika.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9082,
-		"inputAbbreviatedPath": "\/img\/ika.jpg",
-		"outputAbbreviatedPath": "\/img\/ika.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/logo-invert.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1779,112 +1713,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/maguro.jpg": {
+	"\/img\/making-of.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 30070,
-		"inputAbbreviatedPath": "\/img\/maguro.jpg",
-		"outputAbbreviatedPath": "\/img\/maguro.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/nigiri_fugu.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9583,
-		"inputAbbreviatedPath": "\/img\/nigiri_fugu.jpg",
-		"outputAbbreviatedPath": "\/img\/nigiri_fugu.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/otoro-sushi.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 16537,
-		"inputAbbreviatedPath": "\/img\/otoro-sushi.jpg",
-		"outputAbbreviatedPath": "\/img\/otoro-sushi.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/otoro-sushi.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 110569,
-		"inputAbbreviatedPath": "\/img\/otoro-sushi.png",
-		"outputAbbreviatedPath": "\/img\/otoro-sushi.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/roe.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 25370,
-		"inputAbbreviatedPath": "\/img\/roe.jpg",
-		"outputAbbreviatedPath": "\/img\/roe.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/sake.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 23722,
-		"inputAbbreviatedPath": "\/img\/sake.jpg",
-		"outputAbbreviatedPath": "\/img\/sake.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/shako.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 4453,
-		"inputAbbreviatedPath": "\/img\/shako.jpg",
-		"outputAbbreviatedPath": "\/img\/shako.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/tako.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 15046,
-		"inputAbbreviatedPath": "\/img\/tako.jpg",
-		"outputAbbreviatedPath": "\/img\/tako.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/unagi.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 19280,
-		"inputAbbreviatedPath": "\/img\/unagi.jpg",
-		"outputAbbreviatedPath": "\/img\/unagi.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/uni.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 23234,
-		"inputAbbreviatedPath": "\/img\/uni.jpg",
-		"outputAbbreviatedPath": "\/img\/uni.jpg",
+		"initialSize": 153995,
+		"inputAbbreviatedPath": "\/img\/making-of.jpg",
+		"outputAbbreviatedPath": "\/img\/making-of.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2027,15 +1862,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/partials\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/partials\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/partials\/index.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -2046,6 +1872,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
+		},
+	"\/partials\/info.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/info.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/partials\/info.jade": {
 		"compileDebug": 1,

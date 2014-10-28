@@ -28,5 +28,18 @@
       <div ng-bind-html="trust(episode.fields.brightcoveId)"></div>
     </div>
   </div>
-  
+  <div ng-class="{black: clicked2" style="background-image:url(img/making-of.jpg)" id="2" class="player-frame">
+    <div ng-show="!clicked2" class="title-wrapper">
+      <div class="prev-episode"><a ng-href="#1" du-smooth-scroll="du-smooth-scroll"><img ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}"/></a></div>
+      <div class="title last"></div>
+      <div ng-click="playVideo(2)" class="play-button last"></div>
+      <div class="episode-title last"><img ng-src="{{episode.fields.artistTextImage.fields.file.url}}"/></div>
+    </div>
+    <div ng-show="clicked2" ng-click="closePlayer(2)" class="player-exit"></div>
+    <div class="player dontshow">
+      <div>
+        <iframe width="560" height="315" src="//www.youtube.com/embed/qWBrpgHNxhY" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+      </div>
+    </div>
+  </div>
 </div>
