@@ -9,10 +9,13 @@ sushiControllers.controller('IndexCtrl', [
 	'$rootScope'
 	'$http'
 	'$sce'
+	'$timeout'
 	'contentfulClient'
-	($scope, $rootScope, $http, $sce, contentfulClient) ->
+	'brightCoveService'
+	($scope, $rootScope, $http, $sce, $timeout, contentfulClient, brightCoveService) ->
 
-		$scope.player = {}
+		$scope.player0 = {}
+		$scope.player1 = {}
 		player = {}
 		$scope.sushi = {}
 		$scope.videReady = true
@@ -22,17 +25,13 @@ sushiControllers.controller('IndexCtrl', [
 
 		#background-image
 
-
-
-
-
-
 		
 		contentfulClient.entries({'content_type': '1aSBU2rdZSKAUK4GUQ8iKy','include': 1}).then (data) ->
 			$scope.sushi = data[0]
 			console.log $scope.sushi
-
-			player = $('#myExperience1890493041001')
+			# brightCoveService1.init()
+			$timeout ->
+				brightCoveService.init($scope.defaultEpisode)
 			
 
 		
@@ -42,36 +41,29 @@ sushiControllers.controller('IndexCtrl', [
 			$scope.player = player
 		)
 
+
+
 		$scope.switchVid = (episode) ->
 			$scope.player.loadVideoByID(episode)
 
 
-		$scope.playVideo = (index) ->
+		$scope.playVideo = (id) ->
+			$scope.player.loadVideoByID(id)
 			$scope.videoPlaying = true
-			if index == 0
-				$scope.clicked0 = true
-			if index == 1
-				$scope.clicked1 = true
-			if index == 2
-				$scope.clicked2 = true
-			else
-				return
 
-		$scope.closePlayer = (index) ->
+		$scope.closePlayer = ->
+			$scope.player.pause()
 			$scope.videoPlaying = false
-			if index == 0
-				$scope.clicked0 = false
-			if index == 1
-				$scope.clicked1 = false
-			if index == 2
-				$scope.clicked2 = false
-			else
-				return
+
+
 		#allow editors html
 		$scope.trust = (body) ->
 			return $sce.trustAsHtml(body)
 
 ])
+
+
+
 
 
 

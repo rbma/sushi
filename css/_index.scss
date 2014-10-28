@@ -38,17 +38,19 @@
 
 
 
-	.player{
+	#player{
 		opacity: 1;
 		margin: 0;
 		width: 96%;
-		position: relative;
-		padding-bottom: 45%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding-bottom: 56.25%;
 		padding-top: 0;
-		height: 10%;
+		height: 0;
 		overflow: hidden;
 		margin-left: 2%;
-		z-index: 999;
+		z-index: 0;
 		div{
 			width: 100%;
 			height: 100%;
@@ -58,7 +60,6 @@
 				left: 0;
 				width: 100% !important;
 				height: 100% !important;
-				z-index: 999;
 			}
 		}
 		@media (max-width: 1024px){
@@ -68,15 +69,19 @@
 			margin-top: 35%;
 		}
 
+		&.stack{
+			z-index: 9;
+		}
+
 	}
 
 	.player-exit{
-		position: fixed;
+		position: absolute;
 		top: 20px;
 		right: 40px;
 		width: 50px;
 		height: 50px;
-		z-index: 9999;
+		z-index: 999999;
 		background: url(../img/exit-white.svg) no-repeat center center;
 		@include vendorize(transition, all .1s linear);
 		&:hover{
@@ -215,6 +220,7 @@
 		}
 		&.black{
 			background-image: none !important;
+			background-color: transparent;
 		}
 	}
 

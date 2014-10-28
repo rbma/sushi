@@ -8,6 +8,7 @@ app = angular.module('sushi', [
 	'duScroll'
 	'sushiControllers'
 	'sushiDirectives'
+	'sushiServices'
 	]
 )
 

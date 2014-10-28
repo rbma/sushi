@@ -20,32 +20,32 @@ sushiDirectives.directive('fullsize', ->
 )
 
 
-# sushiDirectives.directive('shrink', ->
+sushiDirectives.directive('shrink', ->
 
 	
 
-# 	link = ($scope, element, attrs) ->
-# 		calc = ->
-# 			width = $(window).width()
+	link = ($scope, element, attrs) ->
+		calc = ->
+			width = $(window).width()
 
-# 			newWidth = width - 28
+			newWidth = width - 28
 
-# 			element.css
-# 				width: newWidth + 'px'
-# 				left: '14px'
-# 				backgroundSize: 'contain'
-# 				backgroundPosition: 'top center'
+			element.css
+				width: newWidth + 'px'
+				left: '14px'
+				backgroundSize: 'contain'
+				backgroundPosition: 'top center'
 
-# 		calc()
+		calc()
 
-# 		$(window).resize ->
-# 			calc()
+		$(window).resize ->
+			calc()
 
 		
 
-# 	return{
-# 		link: link
-# 	}
+	return{
+		link: link
+	}
 
-# )
+)
 

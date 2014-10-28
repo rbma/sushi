@@ -9,62 +9,46 @@
 	.border--left.bg--02
 	.border--bottom.bg--03(shrink)
 
+	div(id="player", ng-class="{stack: videoPlaying}")
+	.player-exit(ng-show="videoPlaying", ng-click="closePlayer()")
+
 
 	.player-frame(ng-repeat="episode in sushi.fields.episodes", 
-		ng-class="{black: clicked{{$index}}}", 
+		ng-show="!videoPlaying", 
 		style="background-image:url({{episode.fields.image.fields.file.url}})",
 		ng-if="!$last", id="{{$index}}")
 		
 
-		.title-wrapper(ng-show="!clicked{{$index}}")
+		.title-wrapper(ng-show="!videoPlaying")
 			.title
-			.play-button(ng-click="playVideo($index)")
+			.play-button(ng-click="playVideo(episode.fields.brightcoveId)")
 			.episode-title
 				img(ng-src="{{episode.fields.artistTextImage.fields.file.url}}")
 			.next-episode
 				a(ng-href="#{{$index + 1}}", du-smooth-scroll)
 					img(ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}")
-		.player-exit(ng-show="clicked{{$index}}", ng-click="closePlayer($index)")
-		.player(class="dontshow")
-			div(ng-bind-html="trust(episode.fields.brightcoveId)")
+		
 
 
 	
 
 
 	.player-frame(ng-repeat="episode in sushi.fields.episodes", 
-		ng-class="{black: clicked{{$index}}}", 
+		ng-show="!videoPlaying",
 		style="background-image:url({{episode.fields.image.fields.file.url}})",
 		ng-if="$last", id="{{$index}}")
 		
-		.title-wrapper(ng-show="!clicked{{$index}}")
+		.title-wrapper(ng-show="!videoPlaying")
 			.prev-episode
 				a(ng-href="#{{$index - 1}}", du-smooth-scroll)
 					img(ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}")
 			.title.last
-			.play-button.last(ng-click="playVideo($index)")
+			.play-button.last(ng-click="playVideo(episode.fields.brightcoveId)")
 			.episode-title.last
 				img(ng-src="{{episode.fields.artistTextImage.fields.file.url}}")
-		.player-exit(ng-show="clicked{{$index}}", ng-click="closePlayer($index)")
-		.player(class="dontshow")
-			div(ng-bind-html="trust(episode.fields.brightcoveId)")
 
 
-	//- MAKING OF
-	.player-frame(ng-class="{black: clicked2", style="background-image:url(img/making-of.jpg)", id="2")
-		
-		.title-wrapper(ng-show="!clicked2")
-			.prev-episode
-				a(ng-href="#1", du-smooth-scroll)
-					img(ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}")
-			.title.last
-			.play-button.last(ng-click="playVideo(2)")
-			.episode-title.last
-				img(ng-src="{{episode.fields.artistTextImage.fields.file.url}}")
-		.player-exit(ng-show="clicked2", ng-click="closePlayer(2)")
-		.player(class="dontshow")
-			div
-				iframe(width="560" height="315" src="//www.youtube.com/embed/qWBrpgHNxhY" frameborder="0" allowfullscreen)
+
 
 
 

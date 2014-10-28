@@ -150,40 +150,43 @@ button {
     @media (max-width: 768px) {
       .index-wrapper .info {
         right: 20px; } }
-  .index-wrapper .player {
+  .index-wrapper #player {
     opacity: 1;
     margin: 0;
     width: 96%;
-    position: relative;
-    padding-bottom: 45%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-bottom: 56.25%;
     padding-top: 0;
-    height: 10%;
+    height: 0;
     overflow: hidden;
     margin-left: 2%;
-    z-index: 999; }
-    .index-wrapper .player div {
+    z-index: 0; }
+    .index-wrapper #player div {
       width: 100%;
       height: 100%; }
-      .index-wrapper .player div iframe, .index-wrapper .player div object, .index-wrapper .player div embed {
+      .index-wrapper #player div iframe, .index-wrapper #player div object, .index-wrapper #player div embed {
         position: absolute;
         top: 0;
         left: 0;
         width: 100% !important;
-        height: 100% !important;
-        z-index: 999; }
+        height: 100% !important; }
     @media (max-width: 1024px) {
-      .index-wrapper .player {
+      .index-wrapper #player {
         margin-top: 10%; } }
     @media (max-width: 768px) {
-      .index-wrapper .player {
+      .index-wrapper #player {
         margin-top: 35%; } }
+    .index-wrapper #player.stack {
+      z-index: 2; }
   .index-wrapper .player-exit {
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 40px;
     width: 50px;
     height: 50px;
-    z-index: 9999;
+    z-index: 999999;
     background: url(../img/exit-white.svg) no-repeat center center;
     -webkit-transition: all 0.1s linear;
     -moz-transition: all 0.1s linear;
@@ -337,7 +340,8 @@ button {
           width: 30%;
           margin-left: 35%; } }
     .index-wrapper .player-frame.black {
-      background-image: none !important; }
+      background-image: none !important;
+      background-color: transparent; }
 
 .info-wrapper {
   position: absolute;
