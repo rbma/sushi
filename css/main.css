@@ -153,15 +153,15 @@ button {
   .index-wrapper #player {
     opacity: 1;
     margin: 0;
-    width: 96%;
+    width: 80%;
     position: fixed;
-    top: 0;
+    top: 10%;
     left: 0;
-    padding-bottom: 56.25%;
+    padding-bottom: 46.25%;
     padding-top: 0;
     height: 0;
     overflow: hidden;
-    margin-left: 2%;
+    margin-left: 10%;
     z-index: 0; }
     .index-wrapper #player div {
       width: 100%;
@@ -179,7 +179,7 @@ button {
       .index-wrapper #player {
         margin-top: 35%; } }
     .index-wrapper #player.stack {
-      z-index: 2; }
+      z-index: 9; }
   .index-wrapper .player-exit {
     position: absolute;
     top: 20px;
@@ -340,8 +340,7 @@ button {
           width: 30%;
           margin-left: 35%; } }
     .index-wrapper .player-frame.black {
-      background-image: none !important;
-      background-color: transparent; }
+      background-image: none !important; }
 
 .info-wrapper {
   position: absolute;

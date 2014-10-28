@@ -66,9 +66,6 @@ sushiControllers.controller('IndexCtrl', [
 
 
 
-
-
-
 sushiControllers.controller('InfoControl', [
 	'$scope'
 	'$http'

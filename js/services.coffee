@@ -10,9 +10,10 @@ sushiServices.factory('brightCoveService', ['$rootScope', '$window', ($rootScope
 	modVP = {}
 	videoPlayer = {}
 	vidRatio = 640 / 360
+	videoContainer = {}
 
-	width =  $(window).width()
-	height = ($(window).width()) / vidRatio
+	width =  $(window).width() / 1.5
+	height = ($(window).width() / 1.5) / vidRatio
 
 
 		#LISTENERS
@@ -22,11 +23,25 @@ sushiServices.factory('brightCoveService', ['$rootScope', '$window', ($rootScope
 		modVP = player.getModule(brightcove.api.modules.APIModules.VIDEO_PLAYER)
 
 
+	resize = ->
+		newWidth = $(window).width() / 1.5
+		newHeight = ($(window).width() / 1.5) / vidRatio
+
+		videoContainer.attr("width", newWidth)
+		videoContainer.attr("height", newHeight)
+
+
+
 	window.onTemplateReady = (evt) ->
 		videoPlayer = player.getModule(APIModules.VIDEO_PLAYER)
 
 		#broadcast message to controller that we can now get reference to player
 		$rootScope.$broadcast('playerready', videoPlayer)
+
+		#get reference to actual object so we can resize on window
+		videoContainer = $('#myExperience')
+
+		window.addEventListener('resize', resize, true)
 
 		# resizePlayer($('#myExperience'))
 		modVP.addEventListener(brightcove.api.events.MediaEvent.BEGIN, onMediaEventFired)
@@ -36,6 +51,16 @@ sushiServices.factory('brightCoveService', ['$rootScope', '$window', ($rootScope
 		modVP.addEventListener(brightcove.api.events.MediaEvent.PLAY, onMediaEventFired)
 		#modVP.addEventListener(brightcove.api.events.MediaEvent.PROGRESS, onMediaProgressFired)
 		modVP.addEventListener(brightcove.api.events.MediaEvent.STOP, onMediaEventFired)
+		
+
+
+	
+
+
+		# vid.attr("width", vidWidth)
+		# vid.attr("height", vidWidth / ratio)
+
+		
 
 
 	addPlayer = ->

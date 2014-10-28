@@ -41,15 +41,15 @@
 	#player{
 		opacity: 1;
 		margin: 0;
-		width: 96%;
+		width: 80%;
 		position: fixed;
-		top: 0;
+		top: 10%;
 		left: 0;
-		padding-bottom: 56.25%;
+		padding-bottom: 46.25%;
 		padding-top: 0;
 		height: 0;
 		overflow: hidden;
-		margin-left: 2%;
+		margin-left: 10%;
 		z-index: 0;
 		div{
 			width: 100%;
@@ -220,7 +220,7 @@
 		}
 		&.black{
 			background-image: none !important;
-			background-color: transparent;
+			// background-color: transparent;
 		}
 	}
 

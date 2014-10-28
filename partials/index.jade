@@ -9,7 +9,7 @@
 	.border--left.bg--02
 	.border--bottom.bg--03(shrink)
 
-	div(id="player", ng-class="{stack: videoPlaying}")
+	div(id="player", ng-class="{stack: videoPlaying}", resize)
 	.player-exit(ng-show="videoPlaying", ng-click="closePlayer()")
 
 

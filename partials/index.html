@@ -4,7 +4,7 @@
   <div class="border--right bg--01"></div>
   <div class="border--left bg--02"></div>
   <div shrink="shrink" class="border--bottom bg--03"></div>
-  <div id="player" ng-class="{stack: videoPlaying}"></div>
+  <div id="player" ng-class="{stack: videoPlaying}" resize="resize"></div>
   <div ng-show="videoPlaying" ng-click="closePlayer()" class="player-exit"></div>
   <div ng-repeat="episode in sushi.fields.episodes" ng-show="!videoPlaying" style="background-image:url({{episode.fields.image.fields.file.url}})" ng-if="!$last" id="{{$index}}" class="player-frame">
     <div ng-show="!videoPlaying" class="title-wrapper">

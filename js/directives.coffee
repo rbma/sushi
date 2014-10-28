@@ -41,11 +41,11 @@ sushiDirectives.directive('shrink', ->
 		$(window).resize ->
 			calc()
 
-		
-
 	return{
 		link: link
 	}
 
 )
+
+
 
