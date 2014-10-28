@@ -6,6 +6,10 @@
   <div shrink="shrink" class="border--bottom bg--03"></div>
   <div id="player" ng-class="{stack: videoPlaying}" resize="resize"></div>
   <div ng-show="videoPlaying" ng-click="closePlayer()" class="player-exit"></div>
+  <div ng-show="videoPlaying" class="button-group">
+    <div class="button"><a href="https://twitter.com/share?url={{sushi.fields.shareUrl}}/&amp;text={{sushi.fields.twitterShareText}}" target="blank"><span class="fa fa-twitter"></span></a></div>
+    <div class="button"><a href="https://www.facebook.com/sharer/sharer.php?u={{sushi.fields.shareUrl}}/" target="blank"><span class="fa fa-facebook"></span></a></div>
+  </div>
   <div ng-repeat="episode in sushi.fields.episodes" ng-show="!videoPlaying" style="background-image:url({{episode.fields.image.fields.file.url}})" ng-if="!$last" id="{{$index}}" class="player-frame {{episode.fields.brightcoveId}}">
     <div ng-show="!videoPlaying" class="title-wrapper">
       <div class="title"></div>

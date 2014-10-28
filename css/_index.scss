@@ -164,7 +164,12 @@
 			@media (max-width: 1024px){
 				&.last{
 					top: -7px;
+					@media (orientation: landscape){
+						top: -25px;
+					
+					}
 				}
+
 			}
 			@media (max-width: 767px){
 				width: 60%;
@@ -195,7 +200,10 @@
 			&.last{
 				margin-top: -40px;
 				@media (max-width: 1024px){
-					margin-top: -12%;
+					margin-top: -2%;
+					@media (orientation: landscape){
+						margin-top: -4%;
+					}
 				}
 				@media (max-width: 767px){
 					margin-top: -20%;
@@ -207,6 +215,7 @@
 			&:hover{
 				@include vendorize(transform, scale(1.2));
 			}
+
 			@media (max-width: 767px){
 				margin-top: 15%;
 				width: 30%;
@@ -292,5 +301,44 @@
 		}
 	}
 
+	.button-group{
+		box-sizing: border-box;
+		width: 60px;
+		position: fixed;
+		top: 80px;
+		right: 30px;
+		z-index: 99999;
+		@media (max-width: 1024px){
+			right: 0;
+		}
+	
+		.button{
+			background-color: black;
+			border-radius: 0;
+			color: white;
+			margin: 0;
+			width: 35px;
+			height: 35px;
+			line-height: 35px;
+			display: block;
+			text-align: center;
+			@include smallboxy();
+			@include vendorize(transition, all .1s linear);
+			&:active, &:hover{
+				@include vendorize(transform, translate(3px,3px));
+				@include vendorize(box-shadow, none);
+			}
+			span{
+				color: white;
+				font-size: 1.5rem;
+				line-height: 1;
+				vertical-align: middle;
+				margin-left: auto;
+				text-align: center;
+				margin-left: 5px;
+				margin-right: auto;
+			}
+		}
+	}
 
 }

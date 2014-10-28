@@ -1562,6 +1562,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/css\/_colors.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/_colors.scss",
+		"outputAbbreviatedPath": "\/css\/_colors.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/css\/_fonts.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -1735,15 +1751,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/index.html": {
-		"fileType": 8192,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/index.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -1892,6 +1899,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
+		},
+	"\/partials\/info.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/info.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/partials\/info.jade": {
 		"compileDebug": 1,

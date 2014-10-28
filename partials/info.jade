@@ -31,4 +31,15 @@
 				.text
 					h3 {{item.fields.title}}
 					p {{item.fields.description}}
+
+		.button-group
+				
+			.button
+				a(href="https://twitter.com/share?url={{sushi.fields.shareUrl}}/&text={{sushi.fields.twitterShareText}}", target="blank")
+					span(class="fa fa-twitter")
+
+					
+			.button
+				a(href="https://www.facebook.com/sharer/sharer.php?u={{sushi.fields.shareUrl}}/", target="blank")
+					span(class="fa fa-facebook")
 	

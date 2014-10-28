@@ -11,6 +11,14 @@
 
 	div(id="player", ng-class="{stack: videoPlaying}", resize)
 	.player-exit(ng-show="videoPlaying", ng-click="closePlayer()")
+	.button-group(ng-show="videoPlaying")
+		.button
+			a(href="https://twitter.com/share?url={{sushi.fields.shareUrl}}/&text={{sushi.fields.twitterShareText}}", target="blank")
+				span(class="fa fa-twitter")
+	
+		.button
+			a(href="https://www.facebook.com/sharer/sharer.php?u={{sushi.fields.shareUrl}}/", target="blank")
+				span(class="fa fa-facebook")
 
 
 	

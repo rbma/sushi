@@ -283,6 +283,10 @@ button {
       @media (max-width: 1024px) {
         .index-wrapper .player-frame .title.last {
           top: -7px; } }
+  @media (max-width: 1024px) and (orientation: landscape) {
+    .index-wrapper .player-frame .title.last {
+      top: -25px; } }
+
       @media (max-width: 767px) {
         .index-wrapper .player-frame .title {
           width: 60%;
@@ -315,7 +319,11 @@ button {
         margin-top: -40px; }
         @media (max-width: 1024px) {
           .index-wrapper .player-frame .play-button.last {
-            margin-top: -12%; } }
+            margin-top: -2%; } }
+  @media (max-width: 1024px) and (orientation: landscape) {
+    .index-wrapper .player-frame .play-button.last {
+      margin-top: -4%; } }
+
         @media (max-width: 767px) {
           .index-wrapper .player-frame .play-button.last {
             margin-top: -20%; } }
@@ -405,6 +413,52 @@ button {
       background-image: none !important; }
     .index-wrapper .player-frame.stacklevel {
       z-index: -1; }
+  .index-wrapper .button-group {
+    box-sizing: border-box;
+    width: 60px;
+    position: fixed;
+    top: 80px;
+    right: 30px;
+    z-index: 99999; }
+    @media (max-width: 1024px) {
+      .index-wrapper .button-group {
+        right: 0; } }
+    .index-wrapper .button-group .button {
+      background-color: black;
+      border-radius: 0;
+      color: white;
+      margin: 0;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      display: block;
+      text-align: center;
+      box-shadow: 1px 0px 1px #4d4d4d, 0px 1px 0px #333333, 2px 1px 0px #4d4d4d, 1px 2px 0px #333333, 3px 2px 0px #4d4d4d, 2px 3px 0px #333333, 4px 3px 0px #4d4d4d, 3px 4px 0px #333333, 5px 4px 0px #4d4d4d, 4px 5px 0px #333333, 6px 5px 0px #4d4d4d, 5px 6px 0px #333333, 7px 6px 0px #4d4d4d;
+      -webkit-transition: all 0.1s linear;
+      -moz-transition: all 0.1s linear;
+      -ms-transition: all 0.1s linear;
+      -o-transition: all 0.1s linear;
+      transition: all 0.1s linear; }
+      .index-wrapper .button-group .button:active, .index-wrapper .button-group .button:hover {
+        -webkit-transform: translate(3px, 3px);
+        -moz-transform: translate(3px, 3px);
+        -ms-transform: translate(3px, 3px);
+        -o-transform: translate(3px, 3px);
+        transform: translate(3px, 3px);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        -o-box-shadow: none;
+        box-shadow: none; }
+      .index-wrapper .button-group .button span {
+        color: white;
+        font-size: 1.5rem;
+        line-height: 1;
+        vertical-align: middle;
+        margin-left: auto;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: auto; }
 
 .info-wrapper {
   position: absolute;
@@ -417,7 +471,6 @@ button {
   background-color: black;
   color: black;
   -webkit-overflow-scrolling: touch;
-  background: url(../img/sushi.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -428,7 +481,8 @@ button {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    z-index: 1; }
     @media (max-width: 1024px) {
       .info-wrapper iframe.threed {
         display: none; } }
@@ -473,7 +527,8 @@ button {
     background-color: white;
     color: black;
     opacity: 0.95;
-    padding-bottom: 100px; }
+    padding-bottom: 100px;
+    z-index: 2; }
     @media (max-width: 1024px) {
       .info-wrapper .text-box {
         width: 76%;
@@ -609,6 +664,46 @@ button {
             margin-left: 5%;
             margin-top: 0;
             font-size: 0.7em; }
+    .info-wrapper .text-box .button-group {
+      box-sizing: border-box;
+      margin-left: 0;
+      width: 100%; }
+      .info-wrapper .text-box .button-group .button {
+        background-color: black;
+        border-radius: 0;
+        color: white;
+        margin: 0;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        display: inline-block;
+        text-align: center;
+        box-shadow: 1px 0px 1px #4d4d4d, 0px 1px 0px #333333, 2px 1px 0px #4d4d4d, 1px 2px 0px #333333, 3px 2px 0px #4d4d4d, 2px 3px 0px #333333, 4px 3px 0px #4d4d4d, 3px 4px 0px #333333, 5px 4px 0px #4d4d4d, 4px 5px 0px #333333, 6px 5px 0px #4d4d4d, 5px 6px 0px #333333, 7px 6px 0px #4d4d4d;
+        -webkit-transition: all 0.1s linear;
+        -moz-transition: all 0.1s linear;
+        -ms-transition: all 0.1s linear;
+        -o-transition: all 0.1s linear;
+        transition: all 0.1s linear; }
+        .info-wrapper .text-box .button-group .button:active, .info-wrapper .text-box .button-group .button:hover {
+          -webkit-transform: translate(3px, 3px);
+          -moz-transform: translate(3px, 3px);
+          -ms-transform: translate(3px, 3px);
+          -o-transform: translate(3px, 3px);
+          transform: translate(3px, 3px);
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          -ms-box-shadow: none;
+          -o-box-shadow: none;
+          box-shadow: none; }
+        .info-wrapper .text-box .button-group .button span {
+          color: white;
+          font-size: 1.5rem;
+          line-height: 1;
+          vertical-align: middle;
+          margin-left: auto;
+          text-align: center;
+          margin-left: 5px;
+          margin-right: auto; }
 
 .view-animate.ng-enter, .view-animate.ng-leave {
   -webkit-transition: all linear .5s;
