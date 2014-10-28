@@ -24,10 +24,10 @@
 
 	.info{
 		position: fixed;
-		top: 20px;
+		top: 10px;
 		right: 40px;
-		width: 50px;
-		height: 50px;
+		width: 60px;
+		height: 60px;
 		color: white;
 		z-index: 9999;
 		img{
@@ -144,7 +144,7 @@
 			height: auto;
 			display: block;
 			position: relative;
-			margin-top: 50%;
+			margin-top: 90%;
 			@media (max-width: 767px){
 				margin-top: 150%;
 			}

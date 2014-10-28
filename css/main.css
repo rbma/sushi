@@ -125,8 +125,8 @@ button {
   -webkit-backface-visibility: hidden; }
   .index-wrapper .info {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 40px;
     width: 60px;
     height: 60px;
     z-index: 9999;
@@ -174,18 +174,17 @@ button {
         left: 0;
         width: 100% !important;
         height: 100% !important; }
-    @media (max-width: 1024px) {
-      .index-wrapper #player {
-        margin-top: 25%; } }
     @media (max-width: 767px) {
       .index-wrapper #player {
-        margin-top: 35%; } }
+        margin-top: 35%;
+        width: 90%;
+        margin-left: 5%; } }
     .index-wrapper #player.stack {
       z-index: 9; }
   .index-wrapper .player-exit {
-    position: absolute;
+    position: fixed;
     top: 10px;
-    right: 10px;
+    right: 40px;
     width: 60px;
     height: 60px;
     z-index: 999999;
@@ -201,6 +200,9 @@ button {
       -ms-transform: rotate(-20deg);
       -o-transform: rotate(-20deg);
       transform: rotate(-20deg); }
+    @media (max-width: 767px) {
+      .index-wrapper .player-exit {
+        right: 10px; } }
   .index-wrapper .player-frame {
     opacity: 1;
     border-bottom: 2px solid white;
@@ -253,10 +255,16 @@ button {
         -ms-transform: scale(1.1);
         -o-transform: scale(1.1);
         transform: scale(1.1); }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .index-wrapper .player-frame .prev-episode {
           width: 30%;
-          margin-left: 35%; } }
+          margin-left: 35%;
+          margin-top: 20px; } }
+  @media (max-width: 767px) and (orientation: landscape) {
+    .index-wrapper .player-frame .prev-episode {
+      width: 16%;
+      margin-left: 42%; } }
+
     .index-wrapper .player-frame .title {
       position: relative;
       top: 15%;
@@ -267,11 +275,19 @@ button {
       height: 35%; }
       .index-wrapper .player-frame .title.last {
         top: -30px; }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .index-wrapper .player-frame .title {
-          width: 40%;
-          left: 30%;
-          top: 5%; } }
+          width: 60%;
+          left: 20%;
+          top: 15%; }
+          .index-wrapper .player-frame .title.last {
+            top: -40px; } }
+  @media (max-width: 767px) and (orientation: landscape) {
+    .index-wrapper .player-frame .title {
+      width: 20%;
+      top: 5%;
+      left: 40%; } }
+
     .index-wrapper .player-frame .play-button {
       width: 10%;
       height: 10%;
@@ -288,21 +304,29 @@ button {
       -o-transition: all 0.1s linear;
       transition: all 0.1s linear; }
       .index-wrapper .player-frame .play-button.last {
-        margin-top: -20px; }
-        @media (max-width: 768px) {
+        margin-top: -40px; }
+        @media (max-width: 767px) {
           .index-wrapper .player-frame .play-button.last {
-            margin-top: -15%; } }
+            margin-top: -20%; } }
+  @media (max-width: 767px) and (orientation: landscape) {
+    .index-wrapper .player-frame .play-button.last {
+      margin-top: -10%; } }
+
       .index-wrapper .player-frame .play-button:hover {
         -webkit-transform: scale(1.2);
         -moz-transform: scale(1.2);
         -ms-transform: scale(1.2);
         -o-transform: scale(1.2);
         transform: scale(1.2); }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .index-wrapper .player-frame .play-button {
-          margin-top: 0;
-          width: 10%;
-          left: 45%; } }
+          margin-top: 15%;
+          width: 30%;
+          left: 35%; } }
+  @media (max-width: 767px) and (orientation: landscape) {
+    .index-wrapper .player-frame .play-button {
+      margin-top: 2%; } }
+
     .index-wrapper .player-frame .episode-title {
       position: relative;
       width: 16%;
@@ -313,11 +337,22 @@ button {
         max-width: 100%; }
       .index-wrapper .player-frame .episode-title.last {
         margin-top: 10px; }
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
+        .index-wrapper .player-frame .episode-title.last {
+          margin-top: 25px; } }
+      @media (max-width: 767px) {
         .index-wrapper .player-frame .episode-title {
-          width: 40%;
-          margin-left: 30%;
-          margin-top: 5%; } }
+          width: 50%;
+          margin-left: 25%;
+          margin-top: 5%; }
+          .index-wrapper .player-frame .episode-title.last {
+            margin-top: 15px; } }
+  @media (max-width: 767px) and (orientation: landscape) {
+    .index-wrapper .player-frame .episode-title {
+      width: 20%;
+      margin-left: 40%;
+      margin-top: 2%; } }
+
     .index-wrapper .player-frame .next-episode {
       position: relative;
       width: 12%;
@@ -337,10 +372,15 @@ button {
         -ms-transform: scale(1.1);
         -o-transform: scale(1.1);
         transform: scale(1.1); }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .index-wrapper .player-frame .next-episode {
           width: 30%;
           margin-left: 35%; } }
+  @media (max-width: 767px) and (orientation: landscape) {
+    .index-wrapper .player-frame .next-episode {
+      width: 16%;
+      margin-left: 42%; } }
+
     .index-wrapper .player-frame.black {
       background-image: none !important; }
     .index-wrapper .player-frame.stacklevel {
@@ -374,10 +414,10 @@ button {
         display: none; } }
   .info-wrapper .info {
     position: fixed;
-    top: 20px;
+    top: 10px;
     right: 40px;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     color: white;
     z-index: 9999; }
     .info-wrapper .info img {
@@ -482,7 +522,7 @@ button {
       height: auto;
       display: block;
       position: relative;
-      margin-top: 50%; }
+      margin-top: 90%; }
       @media (max-width: 767px) {
         .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
           margin-top: 150%; } }
