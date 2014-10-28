@@ -255,6 +255,11 @@ button {
         -ms-transform: scale(1.1);
         -o-transform: scale(1.1);
         transform: scale(1.1); }
+      @media (max-width: 1024px) {
+        .index-wrapper .player-frame .prev-episode {
+          width: 16%;
+          margin-left: 42%;
+          margin-top: 40px; } }
       @media (max-width: 767px) {
         .index-wrapper .player-frame .prev-episode {
           width: 30%;
@@ -275,6 +280,9 @@ button {
       height: 35%; }
       .index-wrapper .player-frame .title.last {
         top: -30px; }
+      @media (max-width: 1024px) {
+        .index-wrapper .player-frame .title.last {
+          top: -7px; } }
       @media (max-width: 767px) {
         .index-wrapper .player-frame .title {
           width: 60%;
@@ -305,6 +313,9 @@ button {
       transition: all 0.1s linear; }
       .index-wrapper .player-frame .play-button.last {
         margin-top: -40px; }
+        @media (max-width: 1024px) {
+          .index-wrapper .player-frame .play-button.last {
+            margin-top: -12%; } }
         @media (max-width: 767px) {
           .index-wrapper .player-frame .play-button.last {
             margin-top: -20%; } }
@@ -338,8 +349,12 @@ button {
       .index-wrapper .player-frame .episode-title.last {
         margin-top: 10px; }
       @media (max-width: 1024px) {
-        .index-wrapper .player-frame .episode-title.last {
-          margin-top: 25px; } }
+        .index-wrapper .player-frame .episode-title {
+          width: 20%;
+          margin-left: 40%;
+          margin-top: 2%; }
+          .index-wrapper .player-frame .episode-title.last {
+            margin-top: 25px; } }
       @media (max-width: 767px) {
         .index-wrapper .player-frame .episode-title {
           width: 50%;
@@ -372,6 +387,11 @@ button {
         -ms-transform: scale(1.1);
         -o-transform: scale(1.1);
         transform: scale(1.1); }
+      @media (max-width: 1024px) {
+        .index-wrapper .player-frame .next-episode {
+          width: 16%;
+          margin-left: 42%;
+          margin-top: 20%; } }
       @media (max-width: 767px) {
         .index-wrapper .player-frame .next-episode {
           width: 30%;
@@ -523,9 +543,24 @@ button {
       display: block;
       position: relative;
       margin-top: 90%; }
+      @media (max-width: 1024px) {
+        .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
+          margin-top: 50%; } }
+  @media (max-width: 1024px) and (orientation: landscape) {
+    .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
+      margin-top: 80%; } }
+
       @media (max-width: 767px) {
         .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
-          margin-top: 150%; } }
+          margin-top: 100%; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3) {
+    .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
+      margin-top: 40%; } }
+
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
+      margin-top: 80%; } }
+
       .info-wrapper .text-box .sushi h3.subhead, .info-wrapper .text-box .sushi h3.casthead, .info-wrapper .text-box .cast h3.subhead, .info-wrapper .text-box .cast h3.casthead {
         text-align: center;
         text-transform: uppercase;

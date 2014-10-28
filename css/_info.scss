@@ -145,8 +145,22 @@
 			display: block;
 			position: relative;
 			margin-top: 90%;
+
+			@media (max-width: 1024px){
+				margin-top: 50%;
+				@media (orientation: landscape){
+					margin-top: 80%;
+				}
+			}
+
 			@media (max-width: 767px){
-				margin-top: 150%;
+				margin-top: 100%;
+				@media (-webkit-min-device-pixel-ratio: 3){
+					margin-top: 40%;
+					@media (orientation: landscape){
+						margin-top: 80%;
+					}
+				}
 			}
 
 			h3.subhead, h3.casthead{
