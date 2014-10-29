@@ -16,7 +16,7 @@
         <div style="background-image:url({{item.fields.image.fields.file.url}})" class="image"></div>
         <div class="text">
           <h3>{{item.fields.title}}</h3>
-          <p>{{item.fields.description}}</p>
+          <div ng-bind-html="trust(item.fields.description)"></div>
         </div>
       </div>
     </div>

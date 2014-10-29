@@ -107,7 +107,14 @@ sushiControllers.controller('InfoControl', [
 		contentfulClient.entries({'sys.id': 'RSlBbwxiQ622C6iiwOG2e','include': 1}).then (data) ->
 			$scope.sushi = data[0]
 
+			
+
 			$scope.sushi.fields.infoDescription = converter.makeHtml($scope.sushi.fields.infoDescription)
+
+			for item in $scope.sushi.fields.sushiTypes
+				item.fields.description = converter.makeHtml(item.fields.description)
+
+
 
 
 

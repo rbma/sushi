@@ -29,7 +29,7 @@
 				.image(style="background-image:url({{item.fields.image.fields.file.url}})")
 				.text
 					h3 {{item.fields.title}}
-					p {{item.fields.description}}
+					div(ng-bind-html="trust(item.fields.description)")
 
 		.button-group
 				
