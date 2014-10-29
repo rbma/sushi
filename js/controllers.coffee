@@ -19,21 +19,23 @@ sushiControllers.controller('IndexCtrl', [
 		player = {}
 		$scope.sushi = {}
 		$scope.videReady = true
-		$scope.defaultEpisode = 3843098628001
-		$scope.clicked0 = false
+		#TOKIMONSTA
+		$scope.defaultEpisode = 3863856095001
+		$scope.clicked = false
 		$scope.videoPlaying = false
 		$scope.currentVideo = ""
 
 		#background-image
 
 		
+		brightCoveService.init($scope.defaultEpisode)
+
+		
 		contentfulClient.entries({'content_type': '1aSBU2rdZSKAUK4GUQ8iKy','include': 1}).then (data) ->
 			$scope.sushi = data[0]
 			console.log $scope.sushi
 			# brightCoveService1.init()
-			$timeout ->
-				brightCoveService.init($scope.defaultEpisode)
-			, 1000
+				
 
 
 			
