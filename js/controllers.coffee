@@ -95,6 +95,11 @@ sushiControllers.controller('InfoControl', [
 			$scope.webglsupport = true
 
 
+		$scope.$watch('webglsupport', ->
+			console.log $scope.webglsupport
+		)
+
+
 
 
 

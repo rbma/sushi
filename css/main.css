@@ -468,7 +468,7 @@ button {
   height: 100%;
   overflow: hidden;
   margin: 0 !important;
-  background-color: black;
+  background-color: transparent;
   color: black;
   -webkit-overflow-scrolling: touch;
   -webkit-background-size: cover;
@@ -476,6 +476,11 @@ button {
   -ms-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  @media (max-width: 1024px) {
+    .info-wrapper {
+      background: url(../img/sushi.jpg) no-repeat center center; } }
+  .info-wrapper.nogl {
+    background: url(../img/sushi.jpg) no-repeat center center; }
   .info-wrapper iframe.threed {
     position: fixed;
     top: 0;
@@ -486,6 +491,8 @@ button {
     @media (max-width: 1024px) {
       .info-wrapper iframe.threed {
         display: none; } }
+    .info-wrapper iframe.threed.nogl {
+      display: none; }
   .info-wrapper .info {
     position: fixed;
     top: 10px;
@@ -543,7 +550,7 @@ button {
       position: relative;
       top: 0;
       width: 100%;
-      height: 100%; }
+      height: auto; }
       .info-wrapper .text-box .info-intro .logo {
         position: relative;
         display: block;
@@ -555,67 +562,27 @@ button {
         @media (max-width: 767px) {
           .info-wrapper .text-box .info-intro .logo {
             margin-top: 20%; } }
-      .info-wrapper .text-box .info-intro a, .info-wrapper .text-box .info-intro i {
+      .info-wrapper .text-box .info-intro a.fa {
         color: black;
-        font-size: 3em; }
+        font-size: 3em;
+        text-decoration: none; }
+      .info-wrapper .text-box .info-intro a {
+        color: black;
+        text-decoration: underline;
+        font-weight: bold; }
       .info-wrapper .text-box .info-intro p {
         width: 80%;
         margin-left: 10%;
         line-height: 1.5;
         font-size: 0.9em;
         font-weight: lighter; }
-      .info-wrapper .text-box .info-intro .making-of-video {
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        -ms-backface-visibility: hidden;
-        -o-backface-visibility: hidden;
-        backface-visibility: hidden;
-        opacity: 1;
-        position: relative;
-        box-sizing: border-box;
-        padding-bottom: 56.25%;
-        padding-top: 30px;
-        height: 0;
-        display: block;
-        overflow: hidden;
-        margin-bottom: 50px;
-        margin-top: 50px;
-        width: 90%;
-        margin-left: 5%;
-        z-index: 1;
-        background-size: cover !important; }
-        .info-wrapper .text-box .info-intro .making-of-video iframe, .info-wrapper .text-box .info-intro .making-of-video object, .info-wrapper .text-box .info-intro .making-of-video embed {
-          position: absolute;
-          display: block;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%; }
     .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
       text-align: left;
       width: 100%;
       height: auto;
       display: block;
       position: relative;
-      margin-top: 90%; }
-      @media (max-width: 1024px) {
-        .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
-          margin-top: 50%; } }
-  @media (max-width: 1024px) and (orientation: landscape) {
-    .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
-      margin-top: 80%; } }
-
-      @media (max-width: 767px) {
-        .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
-          margin-top: 100%; } }
-  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3) {
-    .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
-      margin-top: 40%; } }
-
-  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-    .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
-      margin-top: 80%; } }
-
+      margin-top: 10%; }
       .info-wrapper .text-box .sushi h3.subhead, .info-wrapper .text-box .sushi h3.casthead, .info-wrapper .text-box .cast h3.subhead, .info-wrapper .text-box .cast h3.casthead {
         text-align: center;
         text-transform: uppercase;
