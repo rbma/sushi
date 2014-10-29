@@ -268,7 +268,7 @@
 			width: 12%;
 			text-align: center;
 			left: 44%;
-			bottom: 40px;
+			bottom: 50px;
 			@include vendorize(transition, all .1s linear);
 			img{
 				max-width: fit-content;
