@@ -30,11 +30,9 @@ sushiControllers.controller('IndexCtrl', [
 		
 		brightCoveService.init($scope.defaultEpisode)
 
-		
+
 		contentfulClient.entries({'content_type': '1aSBU2rdZSKAUK4GUQ8iKy','include': 1}).then (data) ->
 			$scope.sushi = data[0]
-			console.log $scope.sushi
-			# brightCoveService1.init()
 				
 
 
