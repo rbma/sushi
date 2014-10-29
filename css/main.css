@@ -127,13 +127,12 @@ button {
     position: fixed;
     top: 10px;
     left: 40px;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     z-index: 9999;
     text-align: center; }
     .index-wrapper .info img {
       max-width: 100%;
-      border-radius: 50%;
       color: white;
       -webkit-font-smoothing: antialiased;
       -webkit-transition: all 0.1s linear;
@@ -151,6 +150,8 @@ button {
       .index-wrapper .info {
         left: 10px;
         top: 10px;
+        width: 60px;
+        height: 60px;
         position: fixed; } }
   .index-wrapper #player {
     opacity: 1;
@@ -185,8 +186,8 @@ button {
     position: fixed;
     top: 10px;
     right: 40px;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     z-index: 999999;
     background: url(../img/exit-white.svg) no-repeat center center;
     -webkit-transition: all 0.1s linear;
@@ -202,7 +203,9 @@ button {
       transform: rotate(-20deg); }
     @media (max-width: 767px) {
       .index-wrapper .player-exit {
-        right: 10px; } }
+        right: 10px;
+        width: 60px;
+        height: 60px; } }
   .index-wrapper .player-frame {
     opacity: 1;
     border-bottom: 2px solid white;
@@ -417,10 +420,13 @@ button {
     box-sizing: border-box;
     width: 60px;
     position: fixed;
-    top: 80px;
-    right: 30px;
+    top: 90px;
+    right: 40px;
     z-index: 99999; }
     @media (max-width: 1024px) {
+      .index-wrapper .button-group {
+        right: 40px; } }
+    @media (max-width: 767px) {
       .index-wrapper .button-group {
         right: 0; } }
     .index-wrapper .button-group .button {
