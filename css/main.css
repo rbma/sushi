@@ -267,8 +267,8 @@ button {
           margin-top: 20px; } }
   @media (max-width: 767px) and (orientation: landscape) {
     .index-wrapper .player-frame .prev-episode {
-      width: 16%;
-      margin-left: 42%; } }
+      width: 10%;
+      margin-left: 45%; } }
 
     .index-wrapper .player-frame .title {
       position: relative;
@@ -372,8 +372,8 @@ button {
             margin-top: 15px; } }
   @media (max-width: 767px) and (orientation: landscape) {
     .index-wrapper .player-frame .episode-title {
-      width: 30%;
-      margin-left: 35%;
+      width: 20%;
+      margin-left: 40%;
       margin-top: 2%; } }
 
     .index-wrapper .player-frame .next-episode {
@@ -406,8 +406,8 @@ button {
           bottom: 20px; } }
   @media (max-width: 767px) and (orientation: landscape) {
     .index-wrapper .player-frame .next-episode {
-      width: 20%;
-      left: 40%; } }
+      width: 10%;
+      left: 45%; } }
 
     .index-wrapper .player-frame.black {
       background-image: none !important; }
