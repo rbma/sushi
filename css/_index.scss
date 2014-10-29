@@ -200,7 +200,7 @@
 			&.last{
 				margin-top: -40px;
 				@media (max-width: 1024px){
-					margin-top: -2%;
+					margin-top: -90px;
 					@media (orientation: landscape){
 						margin-top: -4%;
 					}
@@ -264,11 +264,11 @@
 		}
 
 		.next-episode{
-			position: relative;
+			position: absolute;
 			width: 12%;
 			text-align: center;
-			margin-left: 44%;
-			margin-top: 30px;
+			left: 44%;
+			bottom: 40px;
 			@include vendorize(transition, all .1s linear);
 			img{
 				max-width: 100%;
@@ -277,19 +277,14 @@
 				@include vendorize(transform, scale(1.1));
 			}
 
+
 			@media (max-width: 1024px){
 				width: 16%;
-				margin-left: 42%;
-				margin-top: 20%;
+				left: 42%;
 			}
-
 			@media (max-width: 767px){
 				width: 30%;
-				margin-left: 35%;
-				@media (orientation: landscape){
-					width: 16%;
-					margin-left: 42%;
-				}
+				left: 35%;
 			}
 		}
 		&.black{

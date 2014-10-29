@@ -319,7 +319,7 @@ button {
         margin-top: -40px; }
         @media (max-width: 1024px) {
           .index-wrapper .player-frame .play-button.last {
-            margin-top: -2%; } }
+            margin-top: -90px; } }
   @media (max-width: 1024px) and (orientation: landscape) {
     .index-wrapper .player-frame .play-button.last {
       margin-top: -4%; } }
@@ -377,11 +377,11 @@ button {
       margin-top: 2%; } }
 
     .index-wrapper .player-frame .next-episode {
-      position: relative;
+      position: absolute;
       width: 12%;
       text-align: center;
-      margin-left: 44%;
-      margin-top: 30px;
+      left: 44%;
+      bottom: 40px;
       -webkit-transition: all 0.1s linear;
       -moz-transition: all 0.1s linear;
       -ms-transition: all 0.1s linear;
@@ -398,17 +398,11 @@ button {
       @media (max-width: 1024px) {
         .index-wrapper .player-frame .next-episode {
           width: 16%;
-          margin-left: 42%;
-          margin-top: 20%; } }
+          left: 42%; } }
       @media (max-width: 767px) {
         .index-wrapper .player-frame .next-episode {
           width: 30%;
-          margin-left: 35%; } }
-  @media (max-width: 767px) and (orientation: landscape) {
-    .index-wrapper .player-frame .next-episode {
-      width: 16%;
-      margin-left: 42%; } }
-
+          left: 35%; } }
     .index-wrapper .player-frame.black {
       background-image: none !important; }
     .index-wrapper .player-frame.stacklevel {
@@ -478,9 +472,19 @@ button {
   background-size: cover; }
   @media (max-width: 1024px) {
     .info-wrapper {
-      background: url(../img/sushi.jpg) no-repeat center center; } }
+      background: url(../img/sushi.jpg) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -ms-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; } }
   .info-wrapper.nogl {
-    background: url(../img/sushi.jpg) no-repeat center center; }
+    background: url(../img/sushi.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
   .info-wrapper iframe.threed {
     position: fixed;
     top: 0;
@@ -601,6 +605,9 @@ button {
         position: relative;
         height: 200px;
         box-sizing: border-box; }
+        @media (max-width: 767px) {
+          .info-wrapper .text-box .sushi .item, .info-wrapper .text-box .cast .item {
+            height: 350px; } }
         .info-wrapper .text-box .sushi .item .image, .info-wrapper .text-box .cast .item .image {
           position: absolute;
           left: 5%;

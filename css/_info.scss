@@ -13,10 +13,12 @@
 	@include vendorize(background-size, cover);
 	@media (max-width: 1024px){
 		background: url(../img/sushi.jpg) no-repeat center center;
+		@include vendorize(background-size, cover);
 	}
 	//- If browser has webgl disabled, show static background
 	&.nogl{
 		background: url(../img/sushi.jpg) no-repeat center center;
+		@include vendorize(background-size, cover);
 	}
 	iframe.threed{
 		position: fixed;
@@ -153,6 +155,9 @@
 				position: relative;
 				height: 200px;
 				box-sizing: border-box;
+				@media (max-width: 767px){
+					height: 350px;
+				}
 				.image{
 					position: absolute;
 					left: 5%;
