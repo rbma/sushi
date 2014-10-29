@@ -556,9 +556,10 @@ button {
         display: block;
         text-align: center;
         margin: 0;
-        margin-top: 20px; }
+        margin-top: 20px;
+        margin-bottom: 48px; }
         .info-wrapper .text-box .info-intro .logo img {
-          max-width: 50%; }
+          max-width: 45%; }
         @media (max-width: 767px) {
           .info-wrapper .text-box .info-intro .logo {
             margin-top: 20%; } }
@@ -574,7 +575,7 @@ button {
         width: 80%;
         margin-left: 10%;
         line-height: 1.5;
-        font-size: 0.9em;
+        font-size: 0.8em;
         font-weight: lighter; }
     .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
       text-align: left;
@@ -587,14 +588,8 @@ button {
         text-align: center;
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 2em; }
-        .info-wrapper .text-box .sushi h3.subhead:after, .info-wrapper .text-box .sushi h3.casthead:after, .info-wrapper .text-box .cast h3.subhead:after, .info-wrapper .text-box .cast h3.casthead:after {
-          content: '';
-          display: block;
-          width: 20%;
-          margin-left: 40%;
-          height: 4px;
-          background-color: black; }
+        font-size: 2em;
+        letter-spacing: 1px; }
       .info-wrapper .text-box .sushi .item, .info-wrapper .text-box .cast .item {
         display: block;
         width: 100%;
@@ -624,11 +619,15 @@ button {
           top: 0;
           float: right;
           display: inline;
+          vertical-align: middle;
           width: 60%; }
           .info-wrapper .text-box .sushi .item .text h3, .info-wrapper .text-box .cast .item .text h3 {
             margin-left: 5%;
+            margin-top: 48px;
             max-width: 90%;
-            margin-bottom: 0; }
+            margin-bottom: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px; }
           .info-wrapper .text-box .sushi .item .text p, .info-wrapper .text-box .cast .item .text p {
             max-width: 90%;
             margin-left: 5%;
