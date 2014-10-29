@@ -267,8 +267,8 @@ button {
           margin-top: 20px; } }
   @media (max-width: 767px) and (orientation: landscape) {
     .index-wrapper .player-frame .prev-episode {
-      width: 16%;
-      margin-left: 42%; } }
+      width: 10%;
+      margin-left: 45%; } }
 
     .index-wrapper .player-frame .title {
       position: relative;
@@ -289,8 +289,8 @@ button {
 
       @media (max-width: 767px) {
         .index-wrapper .player-frame .title {
-          width: 60%;
-          left: 20%;
+          width: 30%;
+          left: 35%;
           top: 15%; }
           .index-wrapper .player-frame .title.last {
             top: -40px; } }
@@ -339,7 +339,7 @@ button {
         transform: scale(1.2); }
       @media (max-width: 767px) {
         .index-wrapper .player-frame .play-button {
-          margin-top: 15%;
+          margin-top: 10%;
           width: 30%;
           left: 35%; } }
   @media (max-width: 767px) and (orientation: landscape) {
@@ -402,7 +402,13 @@ button {
       @media (max-width: 767px) {
         .index-wrapper .player-frame .next-episode {
           width: 30%;
-          left: 35%; } }
+          left: 35%;
+          bottom: 20px; } }
+  @media (max-width: 767px) and (orientation: landscape) {
+    .index-wrapper .player-frame .next-episode {
+      width: 10%;
+      left: 45%; } }
+
     .index-wrapper .player-frame.black {
       background-image: none !important; }
     .index-wrapper .player-frame.stacklevel {
