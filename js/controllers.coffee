@@ -33,6 +33,7 @@ sushiControllers.controller('IndexCtrl', [
 			# brightCoveService1.init()
 			$timeout ->
 				brightCoveService.init($scope.defaultEpisode)
+			, 1000
 
 
 			

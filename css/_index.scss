@@ -127,7 +127,7 @@
 			margin-top: 40px;
 			@include vendorize(transition, all .1s linear);
 			img{
-				max-width: 100%;
+				max-width: fit-content;
 			}
 			&:hover{
 				@include vendorize(transform, scale(1.1));
@@ -154,7 +154,7 @@
 			position: relative;
 			top: 15%;
 			background: url(../img/title.svg) no-repeat center center;
-			background-size: 100%;
+			background-size: contain;
 			width: 30%;
 			left: 35%;
 			height: 35%;
@@ -234,7 +234,7 @@
 			margin-top: 0;
 			
 			img{
-				max-width: 100%;
+				max-width: fit-content;
 			}
 			&.last{
 				margin-top: 10px;
@@ -271,7 +271,7 @@
 			bottom: 40px;
 			@include vendorize(transition, all .1s linear);
 			img{
-				max-width: 100%;
+				max-width: fit-content;
 			}
 			&:hover{
 				@include vendorize(transform, scale(1.1));

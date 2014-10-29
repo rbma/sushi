@@ -9,7 +9,6 @@
 	background-color: transparent;
 	color: black;
 	-webkit-overflow-scrolling: touch;
-	// background: url(../img/sushi.jpg) no-repeat center center;
 	@include vendorize(background-size, cover);
 	@media (max-width: 1024px){
 		background: url(../img/sushi.jpg) no-repeat center center;
@@ -70,7 +69,7 @@
 		position: relative;
 		left: 20%;
 		top: 10%;
-		height: 60%;
+		height: 80%;
 		overflow-y: scroll;
 		background-color: white;
 		color: black;
