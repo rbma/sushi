@@ -637,7 +637,8 @@ button {
       box-sizing: border-box;
       margin-left: 0;
       width: 100%;
-      margin-bottom: 100px; }
+      margin-bottom: 100px;
+      margin-top: 48px; }
       .info-wrapper .text-box .button-group .button {
         background-color: white;
         border-radius: 0;
