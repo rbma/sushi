@@ -125,7 +125,7 @@ button {
   -webkit-backface-visibility: hidden; }
   .index-wrapper .info {
     position: fixed;
-    top: 10px;
+    top: 68px;
     left: 40px;
     width: 80px;
     height: 80px;
@@ -184,7 +184,7 @@ button {
       z-index: 9; }
   .index-wrapper .player-exit {
     position: fixed;
-    top: 10px;
+    top: 68px;
     right: 40px;
     width: 80px;
     height: 80px;
@@ -420,7 +420,7 @@ button {
     box-sizing: border-box;
     width: 60px;
     position: fixed;
-    top: 90px;
+    top: 148px;
     right: 40px;
     z-index: 99999; }
     @media (max-width: 1024px) {
@@ -511,7 +511,7 @@ button {
       display: none; }
   .info-wrapper .info {
     position: fixed;
-    top: 10px;
+    top: 68px;
     right: 40px;
     width: 80px;
     height: 80px;
