@@ -544,7 +544,6 @@ button {
     background-color: white;
     color: black;
     opacity: 0.95;
-    padding-bottom: 100px;
     z-index: 2; }
     @media (max-width: 1024px) {
       .info-wrapper .text-box {
@@ -647,7 +646,8 @@ button {
     .info-wrapper .text-box .button-group {
       box-sizing: border-box;
       margin-left: 0;
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 100px; }
       .info-wrapper .text-box .button-group .button {
         background-color: white;
         border-radius: 0;

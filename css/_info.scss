@@ -75,7 +75,6 @@
 		background-color: white;
 		color: black;
 		opacity: 0.95;
-		padding-bottom: 100px;
 		z-index: 2;
 		@media (max-width: 1024px){
 			width: 76%;
@@ -201,6 +200,7 @@
 			box-sizing: border-box;
 			margin-left: 0;
 			width: 100%;
+			margin-bottom: 100px;
 
 
 		
