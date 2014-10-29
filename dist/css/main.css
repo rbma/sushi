@@ -319,7 +319,7 @@ button {
         margin-top: -40px; }
         @media (max-width: 1024px) {
           .index-wrapper .player-frame .play-button.last {
-            margin-top: -2%; } }
+            margin-top: -90px; } }
   @media (max-width: 1024px) and (orientation: landscape) {
     .index-wrapper .player-frame .play-button.last {
       margin-top: -4%; } }
@@ -377,11 +377,11 @@ button {
       margin-top: 2%; } }
 
     .index-wrapper .player-frame .next-episode {
-      position: relative;
+      position: absolute;
       width: 12%;
       text-align: center;
-      margin-left: 44%;
-      margin-top: 30px;
+      left: 44%;
+      bottom: 40px;
       -webkit-transition: all 0.1s linear;
       -moz-transition: all 0.1s linear;
       -ms-transition: all 0.1s linear;
@@ -398,17 +398,11 @@ button {
       @media (max-width: 1024px) {
         .index-wrapper .player-frame .next-episode {
           width: 16%;
-          margin-left: 42%;
-          margin-top: 20%; } }
+          left: 42%; } }
       @media (max-width: 767px) {
         .index-wrapper .player-frame .next-episode {
           width: 30%;
-          margin-left: 35%; } }
-  @media (max-width: 767px) and (orientation: landscape) {
-    .index-wrapper .player-frame .next-episode {
-      width: 16%;
-      margin-left: 42%; } }
-
+          left: 35%; } }
     .index-wrapper .player-frame.black {
       background-image: none !important; }
     .index-wrapper .player-frame.stacklevel {
@@ -468,7 +462,7 @@ button {
   height: 100%;
   overflow: hidden;
   margin: 0 !important;
-  background-color: black;
+  background-color: transparent;
   color: black;
   -webkit-overflow-scrolling: touch;
   -webkit-background-size: cover;
@@ -476,6 +470,21 @@ button {
   -ms-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  @media (max-width: 1024px) {
+    .info-wrapper {
+      background: url(../img/sushi.jpg) no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -ms-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; } }
+  .info-wrapper.nogl {
+    background: url(../img/sushi.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
   .info-wrapper iframe.threed {
     position: fixed;
     top: 0;
@@ -486,6 +495,8 @@ button {
     @media (max-width: 1024px) {
       .info-wrapper iframe.threed {
         display: none; } }
+    .info-wrapper iframe.threed.nogl {
+      display: none; }
   .info-wrapper .info {
     position: fixed;
     top: 10px;
@@ -543,7 +554,7 @@ button {
       position: relative;
       top: 0;
       width: 100%;
-      height: 100%; }
+      height: auto; }
       .info-wrapper .text-box .info-intro .logo {
         position: relative;
         display: block;
@@ -555,67 +566,27 @@ button {
         @media (max-width: 767px) {
           .info-wrapper .text-box .info-intro .logo {
             margin-top: 20%; } }
-      .info-wrapper .text-box .info-intro a, .info-wrapper .text-box .info-intro i {
+      .info-wrapper .text-box .info-intro a.fa {
         color: black;
-        font-size: 3em; }
+        font-size: 3em;
+        text-decoration: none; }
+      .info-wrapper .text-box .info-intro a {
+        color: black;
+        text-decoration: underline;
+        font-weight: bold; }
       .info-wrapper .text-box .info-intro p {
         width: 80%;
         margin-left: 10%;
         line-height: 1.5;
         font-size: 0.9em;
         font-weight: lighter; }
-      .info-wrapper .text-box .info-intro .making-of-video {
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        -ms-backface-visibility: hidden;
-        -o-backface-visibility: hidden;
-        backface-visibility: hidden;
-        opacity: 1;
-        position: relative;
-        box-sizing: border-box;
-        padding-bottom: 56.25%;
-        padding-top: 30px;
-        height: 0;
-        display: block;
-        overflow: hidden;
-        margin-bottom: 50px;
-        margin-top: 50px;
-        width: 90%;
-        margin-left: 5%;
-        z-index: 1;
-        background-size: cover !important; }
-        .info-wrapper .text-box .info-intro .making-of-video iframe, .info-wrapper .text-box .info-intro .making-of-video object, .info-wrapper .text-box .info-intro .making-of-video embed {
-          position: absolute;
-          display: block;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%; }
     .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
       text-align: left;
       width: 100%;
       height: auto;
       display: block;
       position: relative;
-      margin-top: 90%; }
-      @media (max-width: 1024px) {
-        .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
-          margin-top: 50%; } }
-  @media (max-width: 1024px) and (orientation: landscape) {
-    .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
-      margin-top: 80%; } }
-
-      @media (max-width: 767px) {
-        .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
-          margin-top: 100%; } }
-  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3) {
-    .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
-      margin-top: 40%; } }
-
-  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
-    .info-wrapper .text-box .sushi, .info-wrapper .text-box .cast {
-      margin-top: 80%; } }
-
+      margin-top: 10%; }
       .info-wrapper .text-box .sushi h3.subhead, .info-wrapper .text-box .sushi h3.casthead, .info-wrapper .text-box .cast h3.subhead, .info-wrapper .text-box .cast h3.casthead {
         text-align: center;
         text-transform: uppercase;
@@ -634,6 +605,9 @@ button {
         position: relative;
         height: 200px;
         box-sizing: border-box; }
+        @media (max-width: 767px) {
+          .info-wrapper .text-box .sushi .item, .info-wrapper .text-box .cast .item {
+            height: 350px; } }
         .info-wrapper .text-box .sushi .item .image, .info-wrapper .text-box .cast .item .image {
           position: absolute;
           left: 5%;
@@ -669,9 +643,10 @@ button {
       margin-left: 0;
       width: 100%; }
       .info-wrapper .text-box .button-group .button {
-        background-color: black;
+        background-color: white;
         border-radius: 0;
-        color: white;
+        color: black;
+        border: 1px solid black;
         margin: 0;
         width: 35px;
         height: 35px;
@@ -679,11 +654,11 @@ button {
         display: inline-block;
         text-align: center;
         box-shadow: 1px 0px 1px #4d4d4d, 0px 1px 0px #333333, 2px 1px 0px #4d4d4d, 1px 2px 0px #333333, 3px 2px 0px #4d4d4d, 2px 3px 0px #333333, 4px 3px 0px #4d4d4d, 3px 4px 0px #333333, 5px 4px 0px #4d4d4d, 4px 5px 0px #333333, 6px 5px 0px #4d4d4d, 5px 6px 0px #333333, 7px 6px 0px #4d4d4d;
-        -webkit-transition: all 0.1s linear;
-        -moz-transition: all 0.1s linear;
-        -ms-transition: all 0.1s linear;
-        -o-transition: all 0.1s linear;
-        transition: all 0.1s linear; }
+        -webkit-transition: all 0.05s linear;
+        -moz-transition: all 0.05s linear;
+        -ms-transition: all 0.05s linear;
+        -o-transition: all 0.05s linear;
+        transition: all 0.05s linear; }
         .info-wrapper .text-box .button-group .button:active, .info-wrapper .text-box .button-group .button:hover {
           -webkit-transform: translate(3px, 3px);
           -moz-transform: translate(3px, 3px);
@@ -696,14 +671,14 @@ button {
           -o-box-shadow: none;
           box-shadow: none; }
         .info-wrapper .text-box .button-group .button span {
-          color: white;
+          color: black;
           font-size: 1.5rem;
           line-height: 1;
           vertical-align: middle;
           margin-left: auto;
           text-align: center;
           margin-left: 5px;
-          margin-right: auto; }
+          margin-right: 5px; }
 
 .view-animate.ng-enter, .view-animate.ng-leave {
   -webkit-transition: all linear .5s;
