@@ -13,7 +13,7 @@
   <div ng-repeat="episode in sushi.fields.episodes" ng-show="!videoPlaying" style="background-image:url({{episode.fields.image.fields.file.url}})" ng-if="!$last" id="{{$index}}" class="player-frame {{episode.fields.brightcoveId}}">
     <div ng-show="!videoPlaying" class="title-wrapper">
       <div class="title"></div>
-      <div ng-click="playVideo(episode.fields.brightcoveId)" class="play-button"></div>
+      <div ng-click="playVideo(3863856095001)" class="play-button"></div>
       <div class="episode-title"><img ng-src="{{episode.fields.artistTextImage.fields.file.url}}"/></div>
       <div class="next-episode"><a ng-href="#{{$index + 1}}" du-smooth-scroll="du-smooth-scroll"><img ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}"/></a></div>
     </div>
@@ -22,7 +22,7 @@
     <div ng-show="!videoPlaying" class="title-wrapper">
       <div class="prev-episode"><a ng-href="#{{$index - 1}}" du-smooth-scroll="du-smooth-scroll"><img ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}"/></a></div>
       <div class="title last"></div>
-      <div ng-click="playVideo(episode.fields.brightcoveId)" class="play-button last"></div>
+      <div ng-click="playVideo(3863856098001)" class="play-button last"></div>
       <div class="episode-title last"><img ng-src="{{episode.fields.artistTextImage.fields.file.url}}"/></div>
     </div>
   </div>

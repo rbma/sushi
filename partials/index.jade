@@ -34,7 +34,7 @@
 
 		.title-wrapper(ng-show="!videoPlaying")
 			.title
-			.play-button(ng-click="playVideo(episode.fields.brightcoveId)")
+			.play-button(ng-click="playVideo(3863856095001)")
 			.episode-title
 				img(ng-src="{{episode.fields.artistTextImage.fields.file.url}}")
 			.next-episode
@@ -57,7 +57,7 @@
 				a(ng-href="#{{$index - 1}}", du-smooth-scroll)
 					img(ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}")
 			.title.last
-			.play-button.last(ng-click="playVideo(episode.fields.brightcoveId)")
+			.play-button.last(ng-click="playVideo(3863856098001)")
 			.episode-title.last
 				img(ng-src="{{episode.fields.artistTextImage.fields.file.url}}")
 
