@@ -438,24 +438,7 @@ button {
       height: 35px;
       line-height: 35px;
       display: block;
-      text-align: center;
-      box-shadow: 1px 0px 1px #4d4d4d, 0px 1px 0px #333333, 2px 1px 0px #4d4d4d, 1px 2px 0px #333333, 3px 2px 0px #4d4d4d, 2px 3px 0px #333333, 4px 3px 0px #4d4d4d, 3px 4px 0px #333333, 5px 4px 0px #4d4d4d, 4px 5px 0px #333333, 6px 5px 0px #4d4d4d, 5px 6px 0px #333333, 7px 6px 0px #4d4d4d;
-      -webkit-transition: all 0.1s linear;
-      -moz-transition: all 0.1s linear;
-      -ms-transition: all 0.1s linear;
-      -o-transition: all 0.1s linear;
-      transition: all 0.1s linear; }
-      .index-wrapper .button-group .button:active, .index-wrapper .button-group .button:hover {
-        -webkit-transform: translate(3px, 3px);
-        -moz-transform: translate(3px, 3px);
-        -ms-transform: translate(3px, 3px);
-        -o-transform: translate(3px, 3px);
-        transform: translate(3px, 3px);
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        -ms-box-shadow: none;
-        -o-box-shadow: none;
-        box-shadow: none; }
+      text-align: center; }
       .index-wrapper .button-group .button span {
         color: white;
         font-size: 1.5rem;
