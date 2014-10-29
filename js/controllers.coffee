@@ -33,6 +33,8 @@ sushiControllers.controller('IndexCtrl', [
 			# brightCoveService1.init()
 			$timeout ->
 				brightCoveService.init($scope.defaultEpisode)
+
+
 			
 
 		
@@ -81,6 +83,8 @@ sushiControllers.controller('InfoControl', [
 
 		$scope.sushi = {}
 
+		converter = new Showdown.converter()
+
 		$scope.threed = webgl.checkWebGL()
 
 		$scope.webglsupport = false
@@ -96,6 +100,8 @@ sushiControllers.controller('InfoControl', [
 
 		contentfulClient.entries({'sys.id': 'RSlBbwxiQ622C6iiwOG2e','include': 1}).then (data) ->
 			$scope.sushi = data[0]
+
+			$scope.sushi.fields.infoDescription = converter.makeHtml($scope.sushi.fields.infoDescription)
 
 
 
