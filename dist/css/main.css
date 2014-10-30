@@ -570,7 +570,12 @@ button {
       .info-wrapper .text-box .info-intro a {
         color: black;
         text-decoration: underline;
-        font-weight: bold; }
+        font-weight: bold;
+        font-size: 1.5em; }
+        .info-wrapper .text-box .info-intro a span.fa {
+          margin-right: 5px;
+          font-size: 0.75em;
+          text-align: middle; }
       .info-wrapper .text-box .info-intro p {
         width: 80%;
         margin-left: 10%;
