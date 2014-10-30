@@ -175,6 +175,9 @@ button {
         left: 0;
         width: 100% !important;
         height: 100% !important; }
+    @media (max-device-width: 1024px) {
+      .index-wrapper #player {
+        margin-top: 20%; } }
     @media (max-width: 767px) {
       .index-wrapper #player {
         margin-top: 35%;

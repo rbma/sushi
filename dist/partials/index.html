@@ -10,20 +10,20 @@
     <div class="button"><a href="https://twitter.com/share?url={{sushi.fields.shareUrl}}/&amp;text={{sushi.fields.twitterShareText}}" target="blank"><span class="fa fa-twitter"></span></a></div>
     <div class="button"><a href="https://www.facebook.com/sharer/sharer.php?u={{sushi.fields.shareUrl}}/" target="blank"><span class="fa fa-facebook"></span></a></div>
   </div>
-  <div ng-repeat="episode in sushi.fields.episodes" ng-show="!videoPlaying" style="background-image:url({{episode.fields.image.fields.file.url}})" ng-if="!$last" id="{{$index}}" class="player-frame {{episode.fields.brightcoveId}}">
+  <div ng-show="!videoPlaying" id="blaze" style="background-image:url({{sushi.fields.episodes[1].fields.image.fields.file.url}})" class="player-frame">
     <div ng-show="!videoPlaying" class="title-wrapper">
       <div class="title"></div>
-      <div ng-click="playVideo(3863856095001)" class="play-button"></div>
-      <div class="episode-title"><img ng-src="{{episode.fields.artistTextImage.fields.file.url}}"/></div>
-      <div class="next-episode"><a ng-href="#{{$index + 1}}" du-smooth-scroll="du-smooth-scroll"><img ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}"/></a></div>
+      <div ng-click="playVideo(3863856098001)" class="play-button"></div>
+      <div class="episode-title"><img ng-src="{{sushi.fields.episodes[1].fields.artistTextImage.fields.file.url}}"/></div>
+      <div class="next-episode"><a href="#toki" du-smooth-scroll="du-smooth-scroll"><img src="img/artist_arrow_toki.svg"/></a></div>
     </div>
   </div>
-  <div ng-repeat="episode in sushi.fields.episodes" ng-show="!videoPlaying" style="background-image:url({{episode.fields.image.fields.file.url}})" ng-style="{stacklevel: currentVideo == episode.fields.brightcoveId}" ng-if="$last" id="{{$index}}" data-episode="{{episode.fields.brightcoveId}}" class="player-frame {{episode.fields.brightcoveId}}">
+  <div ng-show="!videoPlaying" id="toki" style="background-image:url({{sushi.fields.episodes[0].fields.image.fields.file.url}})" class="player-frame">
     <div ng-show="!videoPlaying" class="title-wrapper">
-      <div class="prev-episode"><a ng-href="#{{$index - 1}}" du-smooth-scroll="du-smooth-scroll"><img ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}"/></a></div>
+      <div class="prev-episode"><a href="#blaze" du-smooth-scroll="du-smooth-scroll"><img src="img/artist_arrow_just.svg"/></a></div>
       <div class="title last"></div>
-      <div ng-click="playVideo(3863856098001)" class="play-button last"></div>
-      <div class="episode-title last"><img ng-src="{{episode.fields.artistTextImage.fields.file.url}}"/></div>
+      <div ng-click="playVideo(3863856095001)" class="play-button last"></div>
+      <div class="episode-title last"><img ng-src="{{sushi.fields.episodes[0].fields.artistTextImage.fields.file.url}}"/></div>
     </div>
   </div>
 </div>

@@ -21,46 +21,30 @@
 				span(class="fa fa-facebook")
 
 
-	
 
 
-
-	//-TOKI
-	.player-frame(ng-repeat="episode in sushi.fields.episodes", 
-		ng-show="!videoPlaying", 
-		style="background-image:url({{episode.fields.image.fields.file.url}})",
-		ng-if="!$last", id="{{$index}}",  class="{{episode.fields.brightcoveId}}")
-		
-
+	//- JUST BLAZE
+	.player-frame(ng-show="!videoPlaying", id="blaze", style="background-image:url({{sushi.fields.episodes[1].fields.image.fields.file.url}})")
 		.title-wrapper(ng-show="!videoPlaying")
 			.title
-			.play-button(ng-click="playVideo(3863856095001)")
+			.play-button(ng-click="playVideo(3863856098001)")
 			.episode-title
-				img(ng-src="{{episode.fields.artistTextImage.fields.file.url}}")
+				img(ng-src="{{sushi.fields.episodes[1].fields.artistTextImage.fields.file.url}}")
 			.next-episode
-				a(ng-href="#{{$index + 1}}", du-smooth-scroll)
-					img(ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}")
-		
+				a(href="#toki", du-smooth-scroll)
+					img(src="img/artist_arrow_toki.svg")
 
 
-	
-
-
-	.player-frame(ng-repeat="episode in sushi.fields.episodes", 
-		ng-show="!videoPlaying",
-		style="background-image:url({{episode.fields.image.fields.file.url}})",
-		ng-style="{stacklevel: currentVideo == episode.fields.brightcoveId}"
-		ng-if="$last", id="{{$index}}", data-episode="{{episode.fields.brightcoveId}}", class="{{episode.fields.brightcoveId}}")
-		
+	//- TOKI
+	.player-frame(ng-show="!videoPlaying", id="toki", style="background-image:url({{sushi.fields.episodes[0].fields.image.fields.file.url}})")
 		.title-wrapper(ng-show="!videoPlaying")
 			.prev-episode
-				a(ng-href="#{{$index - 1}}", du-smooth-scroll)
-					img(ng-src="{{episode.fields.nextArtistTextImage.fields.file.url}}")
+				a(href="#blaze", du-smooth-scroll)
+					img(src="img/artist_arrow_just.svg")
 			.title.last
-			.play-button.last(ng-click="playVideo(3863856098001)")
+			.play-button.last(ng-click="playVideo(3863856095001)")
 			.episode-title.last
-				img(ng-src="{{episode.fields.artistTextImage.fields.file.url}}")
-
+				img(ng-src="{{sushi.fields.episodes[0].fields.artistTextImage.fields.file.url}}")
 
 
 
