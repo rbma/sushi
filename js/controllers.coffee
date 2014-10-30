@@ -19,13 +19,12 @@ sushiControllers.controller('IndexCtrl', [
 		player = {}
 		$scope.sushi = {}
 		$scope.videReady = true
-		#TOKIMONSTA
-		$scope.defaultEpisode = 3863856095001
+		#JUST BLAZE
+		$scope.defaultEpisode = 3863856098001
 		$scope.clicked = false
 		$scope.videoPlaying = false
 		$scope.currentVideo = ""
 
-		#background-image
 
 		
 		brightCoveService.init($scope.defaultEpisode)
